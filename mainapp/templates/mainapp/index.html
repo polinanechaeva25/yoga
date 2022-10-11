@@ -61,7 +61,7 @@
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
 <!--					<a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>-->
-					<a href="index.html"><img src="{% static 'img/new_logo.png' %}" width="90" height="88" alt="" title="" /></a>
+					<a href="index.html"><img src="{% static 'img/new_logo.png' %}" width="200" alt="" title="" /></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
@@ -178,7 +178,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-center d-flex align-items-center">
+<!--			There was deleted a the class = row in string num 182-->
+			<div class="justify-content-center d-flex align-items-center" style="margin-right: 225px;margin-left: 225px;">
 				<div class="col-lg-6 col-md-6 single-feature">
 					<figure>
 						<img class="img-fluid" src="{% static 'img/featured-class/f1.jpg' %}" width="300" alt="">
@@ -234,8 +235,9 @@
 
 	<!-- Start schedule Area -->
 	<section class="schedule-area section-gap">
-		<img class="featured-img img-fluid" src="{% static 'img/featured-class/feature-img.png' %}" width="650" alt="">
+		<img class="featured-img img-fluid" src="{% static 'img/featured-class/feature-img.png' %}" width="450" alt="">
 		<div class="container">
+
 			<div class="row d-flex justify-content-center">
 				<div class="col-lg-12">
 					<div class="section-title-wrap text-center">
@@ -250,63 +252,35 @@
 					<table class="schdule-table table table-bordered">
 						<thead class="thead-light">
 							<tr>
-								<th class="head" scope="col">Course name</th>
-								<th class="head" scope="col">mon</th>
-								<th class="head" scope="col">tue</th>
-								<th class="head" scope="col">wed</th>
-								<th class="head" scope="col">thu</th>
-								<th class="head" scope="col">fri</th>
+								<th class="head" scope="col">Виды занятий</th>
+								<th class="head" scope="col">Пн</th>
+								<th class="head" scope="col">Вт</th>
+								<th class="head" scope="col">Ср</th>
+								<th class="head" scope="col">Чт</th>
+								<th class="head" scope="col">Пт</th>
+								<th class="head" scope="col">Вс</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th class="name" scope="row">Fitness Aero</th>
-								<td>02.00</td>
-								<td>10.00</td>
-								<td>02.00</td>
-								<td>02.00</td>
-								<td>10.00</td>
+								<th class="name" scope="row">Pilates Strong</th>
+								<td>10.30</td>
+								<td>—</td>
+								<td>10.30</td>
+								<td>—</td>
+								<td>10.30</td>
+								<td>—</td>
 							</tr>
 							<tr>
-								<th class="name" scope="row">Senior Fitness</th>
-								<td>02.00</td>
-								<td>10.00</td>
-								<td>02.00</td>
-								<td>02.00</td>
-								<td>10.00</td>
-							</tr>
-							<tr>
-								<th class="name" scope="row">Fitness Aero</th>
-								<td>02.00</td>
-								<td>10.00</td>
-								<td>02.00</td>
-								<td>02.00</td>
+								<th class="name" scope="row">Йога</th>
+								<td>—</td>
+								<td>18.00<br>19.00</td>
+								<td>—</td>
+								<td>18.00<br>19.00</td>
+								<td>—</td>
 								<td>10.00</td>
 							</tr>
-							<tr>
-								<th class="name" scope="row">Senior Fitness</th>
-								<td>02.00</td>
-								<td>10.00</td>
-								<td>02.00</td>
-								<td>02.00</td>
-								<td>10.00</td>
-							</tr>
-							<tr>
-								<th class="name" scope="row">Senior Fitness</th>
-								<td>02.00</td>
-								<td>10.00</td>
-								<td>02.00</td>
-								<td>02.00</td>
-								<td>10.00</td>
-							</tr>
-							<tr>
-								<th class="name" scope="row">Senior Fitness</th>
-								<td>02.00</td>
-								<td>10.00</td>
-								<td>02.00</td>
-								<td>02.00</td>
-								<td>10.00</td>
-							</tr>
+
 						</tbody>
 					</table>
 				</div>
@@ -321,8 +295,8 @@
 			<div class="row d-flex justify-content-center">
 				<div class="col-lg-12">
 					<div class="section-title-wrap text-center">
-						<h1>Client’s Feedback</h1>
-						<p>As you pour the first glass of your favorite Chianti or Chardonnay and settle into an intimate Friday evening.</p>
+						<h1>Отзывы клиентов</h1>
+<!--						<p>As you pour the first glass of your favorite Chianti or Chardonnay and settle into an intimate Friday evening.</p>-->
 					</div>
 				</div>
 			</div>
@@ -330,18 +304,19 @@
 			<div class="row">
 				<div class="active-testimonial-carusel">
 					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t1.png' %}" alt="">
+						<img class="mx-auto rounded-circle" src="{% static 'img/Елена Шестакова.png' %}" height="80" alt="">
 						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector,
-							hardware and more. laptop accessory
+							Неделя медосномтра просто СУПЕР! Эффект чувствуется практически сразу. Все уроки очень понравились, но,
+							пожалуй, Урок 2 мне стоит включить в ежедневную практику. Боль в тазобедренном суставе успокоилась после
+							этого урока. Спасибо огромное!
 						</p>
-						<h4>Helena Phillips</h4>
+						<h4>Ирина (9174362959mi@gmail.com)</h4>
 						<p>
-							CEO at Facebook
+							отзыв из Gmail
 						</p>
 					</div>
 					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t2.png' %}" alt="">
+						<img class="mx-auto rounded-circle" src="{% static 'img/Надежда Байраак.png' %}" height="80" alt="">
 						<p class="desc">
 							It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has
 							been achieving great heights so far as its.
@@ -352,7 +327,7 @@
 						</p>
 					</div>
 					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t3.png' %}" alt="">
+						<img class="mx-auto rounded-circle" src="{% static 'img/Анна Туманова.png' %}" height="80" alt="">
 						<p class="desc">
 							About 64% of all on-line teens say that do things online that they wouldn’t want their parents to know about. 11% of all
 							adult internet users visit dating websites.
@@ -435,31 +410,31 @@
 	<!-- End testomial Area -->
 
 	<!-- Start cta-one Area -->
-	<section class="cta-one-area relative section-gap">
-		<img class="cta-img img-fluid" src="{% static 'img/cta-img.png' %}" alt="">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="wrap">
-					<h1>Huge Transaction in last Week</h1>
-					<p>
-						Thinking about overseas adventure travel? Have you put any thought into the best places to go when it comes to overseas adventure
-						travel?
-					</p>
-					<a class="primary-btn" href="#">Become a Member</a>
-				</div>
-			</div>
-		</div>
-	</section>
+<!--	<section class="cta-one-area relative section-gap">-->
+<!--		<img class="cta-img img-fluid" src="{% static 'img/cta-img.png' %}" alt="">-->
+<!--		<div class="container">-->
+<!--			<div class="row justify-content-center">-->
+<!--				<div class="wrap">-->
+<!--					<h1>Huge Transaction in last Week</h1>-->
+<!--					<p>-->
+<!--						Thinking about overseas adventure travel? Have you put any thought into the best places to go when it comes to overseas adventure-->
+<!--						travel?-->
+<!--					</p>-->
+<!--					<a class="primary-btn" href="#">Become a Member</a>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
 	<!-- End cta-one Area -->
 
 	<!-- Start blog Area -->
-	<section class="blog-area section-gap">
+	<section class="blog-area section-gap" style="padding-top: 0px">
 		<div class="container">
 			<div class="row d-flex justify-content-center">
 				<div class="col-lg-12">
 					<div class="section-title-wrap text-center">
-						<h1>Our Recent Blogs</h1>
-						<p>As you pour the first glass of your favorite Chianti or Chardonnay and settle into an intimate Friday evening.</p>
+						<h1>События</h1>
+						<p>Что у нас нового?</p>
 					</div>
 				</div>
 			</div>
@@ -527,34 +502,34 @@
 			<div class="row">
 				<div class="col-lg-3  col-md-6 col-sm-6">
 					<div class="single-footer-widget">
-						<h4>About Us</h4>
+						<h4>О нас</h4>
 						<p>
-							The state of Utah in the United States is home to lots of beautiful National Parks, & Bryce Canyon National Park ranks as
-							three of the magnificent & awe inspiring.
+							Место, где вы можете, наконец, почувствовать себя сильным  здоровым.
+							Персональные и групповые тренировки, обучение йоге онлайн.
 						</p>
 					</div>
 				</div>
 				<div class="col-lg-4  col-md-6 col-sm-6">
 					<div class="single-footer-widget">
-						<h4>Contact Us</h4>
+						<h4>Контакты</h4>
 						<p>
-							56/8, rockybeach road, santa monica, Los angeles, California - 59620.
+							Песочная улица, 2Д, микрорайон Коммунар, Владимир, 600023
 						</p>
 						<p class="number">
-							012-6532-568-9746 <br> 012-6532-569-9748
+							+7 (904) 253-32-40
 						</p>
 					</div>
 				</div>
 				<div class="col-lg-5  col-md-6 col-sm-6">
 					<div class="single-footer-widget">
-						<h4>Newsletter</h4>
-						<p>You can trust us. we only send offers, not a single spam.</p>
+						<h4>Задайте свои вопросы</h4>
+						<p>Вы можете нам доверять, мы не рассылаем спам.</p>
 						<div class="d-flex flex-row" id="mc_embed_signup">
 
 							<form class="navbar-form" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
 							 method="get">
 								<div class="input-group add-on align-items-center d-flex">
-									<input class="form-control" name="email" placeholder="Your Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email address'"
+									<input class="form-control" name="email" placeholder="Ваш email:" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваш email:'"
 									 required="" type="email">
 									<div style="position: absolute; left: -5000px;">
 										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
@@ -571,13 +546,13 @@
 			</div>
 			<div class="footer-bottom row align-items-center">
 				<p class="footer-text m-0 col-lg-6 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+&copy<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 				<div class="col-lg-6 col-sm-12 footer-social">
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-dribbble"></i></a>
-					<a href="#"><i class="fa fa-behance"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-vk"></i></a>
 				</div>
 			</div>
 		</div>
