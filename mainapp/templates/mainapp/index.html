@@ -50,7 +50,7 @@
 					</div>
 					<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
 						<a href="tel:+880 1234 654 953">
-							<span class="text">+8 4995 11 22 33</span>
+							<span class="text">+7 (904) 253-32-40</span>
 						</a>
 						<a class="book-now" href="#">Купить курс</a>
 					</div>
@@ -65,8 +65,8 @@
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
-						<li><a class="active" href="index.html">Главная</a></li>
-						<li><a href="about.html">Обо мне</a></li>
+						<li><a class="active" href="{% url 'index' %}">Главная</a></li>
+						<li><a href="{% url 'about' %}">Обо мне</a></li>
 						<li><a href="trainers.html">Курсы</a></li>
 						<li class="menu-has-children"><a href="">Блог</a>
 							<ul>
@@ -81,7 +81,7 @@
 								<li><a href="elements.html">Elements</a></li>
 							</ul>
 						</li>
-						<li><a href="contact.html">Контакты</a></li>
+						<li><a href="{% url 'contact' %}">Контакты</a></li>
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
@@ -179,7 +179,8 @@
 				</div>
 			</div>
 <!--			There was deleted a the class = row in string num 182-->
-			<div class="justify-content-center d-flex align-items-center" style="margin-right: 225px;margin-left: 225px;">
+<!--			<div class="justify-content-center d-flex align-items-center" style="margin-right: 225px;margin-left: 225px;">-->
+			<div class="justify-content-center d-flex align-items-center" >
 				<div class="col-lg-6 col-md-6 single-feature">
 					<figure>
 						<img class="img-fluid" src="{% static 'img/featured-class/f1.jpg' %}" width="300" alt="">
@@ -310,31 +311,31 @@
 							пожалуй, Урок 2 мне стоит включить в ежедневную практику. Боль в тазобедренном суставе успокоилась после
 							этого урока. Спасибо огромное!
 						</p>
-						<h4>Ирина (9174362959mi@gmail.com)</h4>
+						<h4>Ирина</h4>
 						<p>
-							отзыв из Gmail
+							занимается 5 лет
 						</p>
 					</div>
 					<div class="single-testimonial item">
 						<img class="mx-auto rounded-circle" src="{% static 'img/Надежда Байраак.png' %}" height="80" alt="">
 						<p class="desc">
-							It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has
-							been achieving great heights so far as its.
+							У меня такое чувство, что расправился позвоночник в грудном отделе (как после сеанса мануального терапевта).
+							Иприбавилось энергии.
 						</p>
-						<h4>Cordelia Barton</h4>
+						<h4>Надежда</h4>
 						<p>
-							CEO at Twitter
+							занимается 3 года
 						</p>
 					</div>
 					<div class="single-testimonial item">
 						<img class="mx-auto rounded-circle" src="{% static 'img/Анна Туманова.png' %}" height="80" alt="">
 						<p class="desc">
-							About 64% of all on-line teens say that do things online that they wouldn’t want their parents to know about. 11% of all
-							adult internet users visit dating websites.
+							Спина воспряла, Ваше наставление помогает сделать над собой усилие и благополучно завершить практику, а мне всегда сложно
+							просто взять в руки коврик и заставить себя заниматься!
 						</p>
-						<h4>Carrie Reese</h4>
+						<h4>Анна</h4>
 						<p>
-							CEO at Google
+							занимается 2 месяца
 						</p>
 					</div>
 					<div class="single-testimonial item">
@@ -442,53 +443,53 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6 col-sm-12 single-blog">
 					<div class="thumb">
-						<img class="img-fluid" src="{% static 'img/b1.jpg' %}" alt="">
+						<img class="img-fluid" src="{% static 'img/kalin.jpg' %}" style="width:'220px'; height:'360px'"  alt="">
 					</div>
-					<a href="single-blog.html"><h4>Portable Fashion for women</h4></a>
+					<a href="single-blog.html"><h4>AQUA CAMP - Калининград</h4></a>
 					<div class="text-wrap">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud.
+							Насыщенный тур - море, заливы, реки, озёра Калининградской области.
+							Мой первый опыт яхтинга, sup-сёрфинга и сплава на байдарках в самых живописных местах.
 						</p>
 					</div>
 					<div class="meta-bottom d-flex">
-						<p><span class="lnr lnr-calendar-full"></span> 13th Dec</p>
-						<p><span class="lnr lnr-heart"></span> 15</p>
-						<p><span class="lnr lnr-bubble"></span> 02</p>
+						<p><span class="lnr lnr-calendar-full"></span> 15 Авг</p>
+						<p><span class="lnr lnr-heart"></span> 45</p>
+						<p><span class="lnr lnr-bubble"></span> 7</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12 single-blog">
 					<div class="thumb">
-						<img class="img-fluid" src="{% static 'img/b2.jpg' %}" alt="">
+						<img class="img-fluid" src="{% static 'img/baikal.jpg' %}" alt="">
 					</div>
-					<a href="single-blog.html"><h4>Summer ware are coming</h4></a>
+					<a href="single-blog.html"><h4>Ретрит на Байкале</h4></a>
 					<div class="text-wrap">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud.
+							Остров Огой. Место мистическое, место силы. Как, впрочем, и весь Байкал. Но здесь,
+							где находится Всеблагая Ступа Великого Просветления, дарующая освобождение через видение,
+							это ощущается особенно остро.
 						</p>
 					</div>
 					<div class="meta-bottom d-flex">
-						<p><span class="lnr lnr-calendar-full"></span> 13th Dec</p>
-						<p><span class="lnr lnr-heart"></span> 15</p>
-						<p><span class="lnr lnr-bubble"></span> 02</p>
+						<p><span class="lnr lnr-calendar-full"></span> 18 Июн</p>
+						<p><span class="lnr lnr-heart"></span> 26</p>
+						<p><span class="lnr lnr-bubble"></span> 3</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12 single-blog">
 					<div class="thumb">
-						<img class="img-fluid" src="{% static 'img/b3.jpg' %}" alt="">
+						<img class="img-fluid" src="{% static 'img/abhaz.jpg' %}" alt="">
 					</div>
-					<a href="single-blog.html"><h4>Summer ware are coming</h4></a>
+					<a href="single-blog.html"><h4>Його-тур Абхазия</h4></a>
 					<div class="text-wrap">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							Ut enim ad minim veniam, quis nostrud.
+							Практики прямо на брегу моря наедине с шумящим бризом. Поиск душевного равновесия и гармонии с собой.
 						</p>
 					</div>
 					<div class="meta-bottom d-flex">
-						<p><span class="lnr lnr-calendar-full"></span> 13th Dec</p>
-						<p><span class="lnr lnr-heart"></span> 15</p>
-						<p><span class="lnr lnr-bubble"></span> 02</p>
+						<p><span class="lnr lnr-calendar-full"></span> 20 Июл</p>
+						<p><span class="lnr lnr-heart"></span> 20</p>
+						<p><span class="lnr lnr-bubble"></span> 6</p>
 					</div>
 				</div>
 			</div>

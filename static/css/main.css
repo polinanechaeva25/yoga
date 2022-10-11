@@ -87,7 +87,7 @@ $black			: #000;
   font-weight: 300; }
 
 body {
-  color: #777777;
+  color: #c0c0c0;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2107,9 +2107,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   .feature-area .single-feature:hover p a {
     color: #3CB371; }
 
+div.justify-content-center.d-flex.align-items-center{
+    margin-right: 225px;
+    margin-left: 225px;
+}
 /*--------- end feature area  -------------*/
 .schedule-area {
-  background: #f9f9ff;
+  background: #f0fff0;
   position: relative; }
   .schedule-area .table-wrap {
     position: relative;
@@ -2198,7 +2202,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   padding: 30px;
   text-align: center;
-  background: #f9f9ff;
+  background: #f0fff0;
   margin: 20px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -2281,7 +2285,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------- Start Cta area Style   -------------*/
 .cta-one-area {
-  background: url(../img/cta-bg.jpg) center;
+  background: url(../img/banner-bg.jpg) center;
   background-size: cover;
   text-align: center;
   position: relative; }
@@ -2293,7 +2297,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     .cta-one-area .wrap h1 {
       font-weight: 100; }
   .cta-one-area p {
-    max-width: 550px;
+    max-width: 750px;
     margin: 28px 0px 30px; }
     @media (max-width: 576px) {
       .cta-one-area p {
@@ -2311,13 +2315,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+    .cta-img .extra {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      z-index: 10;
+
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+     }
+ }
   @media (max-width: 768px) {
     .cta-img {
       bottom: -27px; } }
   @media (max-width: 480px) {
     .cta-img {
       bottom: -15px; } }
+
+
 
 /*-------- End Cta area Style   -------------*/
 /*--------- start blog Area -------------*/
@@ -2370,7 +2387,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0px; }
 
 .about-banner {
-  background: url(../img/top-banner.jpg) right no-repeat;
+  background: url(../img/banner-bg.jpg) right no-repeat;
   background-size: cover;
   position: relative; }
 
@@ -2398,7 +2415,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   .about-content p {
     font-weight: 400; }
   .about-content a {
-    color: #777777;
+    color: #c0c0c0;
     font-weight: 300;
     font-size: 14px;
     -webkit-transition: all 0.3s ease 0s;
