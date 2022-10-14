@@ -17,7 +17,7 @@
 						Тренировки
 					</h1>
 					<p class="link-nav"><a href="{% url 'index' %}">Главная </a>
-						<span class="lnr lnr-arrow-right"></span> <a href="{% url 'training' %}">
+						<span class="lnr lnr-arrow-right"></span> <a href="{% url 'training:index' %}">
 							Тренировки</a></p>
 				</div>
 			</div>
@@ -47,7 +47,7 @@
 					<div class="text-center">
 						<h4 class="mb-10">Очные занятия</h4>
 						<p>
-							<a href="{% url 'offline' %}">Узнать подробнее</a>
+							<a href="{% url 'training:offline' %}">Узнать подробнее</a>
 						</p>
 					</div>
 				</div>
@@ -59,7 +59,7 @@
 					<div class="text-center">
 						<h4 class="mb-10">Онлайн курсы</h4>
 						<p>
-							<a href="#">Узнать подробнее</a>
+							<a href="{% url 'training:online' %}">Узнать подробнее</a>
 						</p>
 					</div>
 				</div>

@@ -1,0 +1,102 @@
+{% extends 'mainapp/base.html'%}
+{%load static%}
+
+{%block 'banner' %}
+<!-- start banner Area -->
+	<section class="banner-area relative about-banner" id="home">
+		<img class="cta-img img-fluid" src="{% static 'img/online.png' %}" width="750" alt="">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1>
+						Онлайн курсы
+					</h1>
+					<p class="link-nav"><a href="{% url 'training:index' %}">Тренировки </a>
+						<span class="lnr lnr-arrow-right"></span> <a href="{% url 'training:online' %}">
+							Онлайн курсы</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+{% endblock %}
+
+{% block 'content'%}
+	<!-- Start top-category-widget Area -->
+	<section class="top-category-widget-area pt-90 pb-90 ">
+		<div class="container">
+
+            <div class="row d-flex justify-content-center">
+				<div class="col-lg-12">
+					<div class="section-title-wrap text-center">
+						<h1>Наши программы занятий</h1>
+						<p> Простые шаги для входа в состояние эмоционального равновесия. <br> Ваше тело скажет Вам спасибо.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="single-cat-widget">
+						<div class="content relative">
+							<div class="overlay overlay-bg"></div>
+							<a href="{% url 'training:daily' %}" target="_blank">
+								<div class="thumb">
+									<img class="content-image img-fluid d-block mx-auto" src="{% static 'img/featured-class/f1.jpg' %}" alt="">
+								</div>
+								<div class="content-details">
+									<h4 class="content-title mx-auto text-uppercase">Упражнения на каждый день</h4>
+									<span></span>
+									<p style="margin-left: 30px;margin-right: 30px;">
+										Курс йоги. Уровень начальный.<br> 6 недельная авторская программа Анны Флешлер
+										для тех, кто готов посвятить себе 20 минут в день для входа
+										в ресурсное состояние, эмоционального равновесия, гибкого и стройного тела.</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="single-cat-widget">
+						<div class="content relative">
+							<div class="overlay overlay-bg"></div>
+							<a href="{% url 'training:morning' %}" target="_blank">
+								<div class="thumb">
+									<img class="content-image img-fluid d-block mx-auto" src="{% static 'img/featured-class/f2.jpg' %}" alt="">
+								</div>
+								<div class="content-details">
+									<h4 class="content-title mx-auto text-uppercase">Утренние разминки</h4>
+									<span></span>
+									<p style="margin-left: 30px;margin-right: 30px;">
+										Курс йоги. Уровень средний.<br>7 дневная авторская программа разминок на всё тело,
+										для тонизации мышц и систем организма, бодрости и правильного начала дня! </p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="single-cat-widget">
+						<div class="content relative">
+							<div class="overlay overlay-bg"></div>
+							<a href="{% url 'training:neck' %}" target="_blank">
+								<div class="thumb">
+									<img class="content-image img-fluid d-block mx-auto" src="{% static 'img/featured-class/f3.jpg' %}" alt="">
+								</div>
+								<div class="content-details">
+									<h4 class="content-title mx-auto text-uppercase">Красивая шея</h4>
+									<span></span>
+									<p style="margin-left: 30px;margin-right: 30px;">
+										Курс йоги. Уровень начальный.<br>Мини-курс из 4 уроков для формироания и поддержания красивой осанки
+										и нормальной работы системы сосудов, питающих головной мозг и ткани лица.</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End top-category-widget Area -->
+{% endblock %}

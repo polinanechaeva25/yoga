@@ -1,0 +1,332 @@
+{% extends 'mainapp/base.html'%}
+{%load static%}
+
+{%block 'banner' %}
+<!-- start banner Area -->
+	<section class="banner-area relative about-banner" id="home">
+		<img class="cta-img img-fluid" src="{% static 'img/daily.png' %}"
+			 style="-webkit-transform:translateX(-150%); transform:translateX(-150%);" width="400" alt="">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1>
+						YogaHanna каджый день
+					</h1>
+					<p class="link-nav"><a href="{% url 'training:online' %}">Онлайн курсы </a>
+						<span class="lnr lnr-arrow-right"></span> <a href="{% url 'training:daily' %}">
+							Ежедневные занятия</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+{% endblock %}
+
+{% block 'content' %}
+<section class="whole-wrap">
+	<div class="container">
+		<div class="section-top-border">
+			<div class="row">
+
+				<div class="col-md-4 typo-sec">
+					<h3 class="mb-20">Описание</h3>
+					<div class="typography">
+						<p class="typo-list">Программа курса состоит из 6 недель, в каждой из которых есть элементы
+							из четырех базовых частей в различных вариантах.</p>
+						<p class="typo-list">Программа строится на знаниях и 15-и летнем опыте преподавания автора.
+							По принципу травмобезопасного продвижения вперед, по мере адаптации к нагрузкам
+							на сердечно сосудистую, мышечную и суставную системы организма.</p>
+
+					</div>
+				</div>
+
+
+<!--				<div class="col-md-4 mt-sm-30 typo-sec">-->
+<!--					<h3 class="mb-20">Базовые составные части программы</h3>-->
+<!--					<div class="">-->
+<!--						<ul class="unordered-list">-->
+<!--							<li>Физическая практика. Асаны и переходы.</li>-->
+<!--							<li>Дыхание. Очищение организма – шаткармы.</li>-->
+<!--							<li>Работа с внутренним стержнем – энергетической осью.-->
+<!--							</li>-->
+<!--							<li>Медитация.</li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</div>-->
+
+				<div class="col-md-4 mt-sm-30 typo-sec">
+					<h3 class="mb-20">Базовые составные части программы</h3>
+					<div class="">
+						<ol class="ordered-list">
+							<li><span>Физическая практика. Асаны и переходы.</span></li>
+							<li><span>Дыхание. Очищение организма – шаткармы.</span></li>
+							<li><span>Работа с внутренним стержнем – энергетической осью.</span>
+							</li>
+							<li><span>Медитация.</span></li>
+
+						</ol>
+					</div>
+				</div>
+
+				<div class="col-md-4 typo-sec">
+					<h3 class="mb-20">Что ещё?</h3>
+					<div class="typography">
+						<p class="typo-list">Еженедельные групповые онлайн - консультации
+							(ответы на возникающие вопросы, исправление ошибок).</p>
+						<p class="typo-list">Постоянная поддержка в групповом чате для учеников курса.</p>
+						<p class="typo-list">Для тарифа "ЛЮКС" - 6 персональных тренировок.</p>
+
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<div class="section-top-border">
+			<h1 class="mb-30">Детализация модулей</h1>
+<!--			Первый ряд-->
+				<div class="row gallery-item">
+					<div class="col-md-4">
+						<a href="img/elements/g1.jpg"
+						   class="img-gal"><div class="single-gallery-image"
+												style="background: url(/static/img/elements/el1.jpg);
+												 margin-bottom:30px"></div></a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g2.jpg"
+						   class="img-gal"><div class="single-gallery-image"
+												style="background: url(/static/img/elements/el2.jpg);
+												margin-bottom:30px"></div></a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g3.jpg"
+						   class="img-gal"><div class="single-gallery-image"
+												style="background: url(/static/img/elements/el3.jpg);
+												margin-bottom:30px"></div></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Модуль 1</h4>
+							<p><h6 class="mb-20">Задача:</h6> Познакомиться и освоить базовые практики для суставов
+							и позвоночника.
+								Научиться правильной технике дыхания и поэтапного расслабления.<br><br>
+								<h6 class="mb-20">Результаты:</h6>
+								<ul class="unordered-list">
+									<li>Освоите полное дыхание и поймете его значение для организма.</li>
+									<li>Улучшите подвижность суставов и позвоночника.</li>
+									<li>Начнете применять простые базовые принципы гигиены тела.</li>
+									<li>Познакомитесь с техникой расслабления.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Модуль 2</h4>
+							<p><h6 class="mb-20">Задача:</h6> Начать работать со вниманием и концентрацией.
+							Научиться правильно совмещать дыхание с движением.
+							<br><br>
+								<h6 class="mb-20">Результаты:</h6>
+								<ul class="unordered-list">
+									<li>Освоите начальные техники работы со вниманием и концентрацией.</li>
+									<li>Начнете проработку всего тела в динамичной практике (классический комплекс).</li>
+									<li>Научитесь использовать замки как основу техники безопасности в йоге.</li>
+									<li>Углубите осознанное расслабление.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Модуль 3</h4>
+							<p><h6 class="mb-20">Задача:</h6> Уяснить принципы сбалансированного питания и почувствовать
+							связь между дыханием и внутренним состоянием.<br><br>
+								<h6 class="mb-20">Результаты:</h6>
+								<ul class="unordered-list">
+									<li>Познакомитесь с основными принципами питания и позами для программы Detox.</li>
+									<li>Укрепите мышцы в асимметричных зеркальных позах.</li>
+									<li>Освоите техники дыхания для спокойствия и уравновешенности.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+<!--			Конец первого ряда-->
+
+<!--			Второй ряд-->
+				<div class="row gallery-item">
+					<div class="col-md-4">
+						<a href="img/elements/g1.jpg"
+						   class="img-gal"><div class="single-gallery-image"
+												style="background: url(/static/img/elements/el4.jpg);
+												 margin-bottom:30px"></div></a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g2.jpg"
+						   class="img-gal"><div class="single-gallery-image"
+												style="background: url(/static/img/elements/el5.jpg);
+												margin-bottom:30px"></div></a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g3.jpg"
+						   class="img-gal"><div class="single-gallery-image"
+												style="background: url(/static/img/elements/el6.jpg);
+												margin-bottom:30px"></div></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Модуль 4</h4>
+							<p><h6 class="mb-20">Задача:</h6> Освоить комплекс, активизирующий внутреннюю энергию
+							и силу.<br><br>
+								<h6 class="mb-20">Результаты:</h6>
+								<ul class="unordered-list">
+									<li>Научитесь делать терапевтические упражнения для улучшения состояния
+										позвоночника.</li>
+									<li>Освоите комплекс для активизации энергии в теле.</li>
+									<li>Начнете развивать внутреннюю силу с медитацией «Я есть».</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Модуль 5</h4>
+							<p><h6 class="mb-20">Задача:</h6> Научиться самостоятельно снимать дискомфорт в спине,
+							очищать организм с помощью дыхания.<br><br>
+								<h6 class="mb-20">Результаты:</h6>
+								<ul class="unordered-list">
+									<li>Освоите комплекс упражнений «Скорая помощь» при дискомфорте в спине.</li>
+									<li>Продолжите освоение дыхательных практик – очищающее дыхание.</li>
+									<li>Погрузитесь в медитацию «Мое пространство».</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Модуль 6</h4>
+							<p><h6 class="mb-20">Задача:</h6>Снять напряжение в плечах и спине. Освоить полный вариант
+							очищающего дыхания. С помощью медитации наполнить силой позвоночник для входа в ресурсное
+							состояние.<br><br>
+								<h6 class="mb-20">Результаты:</h6>
+								<ul class="unordered-list">
+									<li>Научитесь применять полный вариант очищающего дыхания
+										(ида, пингала, капалабхати).</li>
+									<li>Добьетесь расслабления верхнего плечевого пояса с помощью практик
+										асан для плеч и спины.</li>
+									<li>Освоите технику более глубокого очищения организма.</li>
+									<li>Проведете медитацию «Сияющий позвоночник» и наполните силой центральную ось
+										организма, чтобы ощущать прилив энергии и находится в ресурсном состоянии.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+<!--			Конец второго ряда-->
+
+<!--			Прайс-->
+
+
+
+			<div class="section-top-border">
+				<h3 class="mb-30">Тарифы</h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<blockquote class="generic-blockquote">
+							<h3>Лайт</h3><br>
+
+							<ul class="unordered-list">
+									<p><h5>6 модулей - 18 уроков</h5></p>
+									<p><h5>Поддержка в групповом чате</h5></p>
+									<p><h5>6 онлайн встреч с автором, для обсуждения вопросов по курсу</h5></p>
+									<p><h5>Дополнительные материалы:</h5><br>
+										<ul>
+											<li><h6>"20 упражнений для красивого лица"</h6></li>
+											<li><h6>"4 техники для укрепления иммунитета"</h6></li>
+										</ul>
+									</p>
+							</ul>
+
+							<div class="container border-top-generic"> <h7>Стоимость 2 000&#8381;</h7>
+									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
+
+							</div>
+
+						</blockquote>
+
+						<blockquote class="generic-blockquote">
+							<h3>Стандарт</h3><br>
+
+							<ul class="unordered-list">
+									<p><h5>6 модулей - 30 уроков</h5></p>
+									<p><h5>Поддержка в групповом чате</h5></p>
+									<p><h5>6 онлайн встреч с автором, для обсуждения вопросов по курсу</h5></p>
+									<p><h5>Дополнительные материалы:</h5><br>
+										<ul>
+											<li><h6>"20 упражнений для красивого лица"</h6></li>
+											<li><h6>"4 техники для укрепления иммунитета"</h6></li>
+											<li><h6>"10 рецептов вегетарианских блюд"</h6></li>
+										</ul>
+									</p>
+							</ul>
+
+							<div class="container border-top-generic"> <h7>Стоимость 3 500&#8381;</h7>
+									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
+
+							</div>
+
+						</blockquote>
+
+						<blockquote class="generic-blockquote">
+							<h3>Люкс</h3><br>
+
+							<ul class="unordered-list">
+									<p><h5>6 модулей - 30 уроков</h5></p>
+									<p><h5>Поддержка в групповом чате</h5></p>
+									<p><h4>6 персональных тренировок</h4></p>
+									<p><h5>Дополнительные материалы:</h5><br>
+										<ul>
+											<li><h6>"20 упражнений для красивого лица"</h6></li>
+											<li><h6>"4 техники для укрепления иммунитета"</h6></li>
+											<li><h6>"10 рецептов вегетарианских блюд"</h6></li>
+											<li><h6>+ мини - курс "йога для фотосессии"</h6></li>
+										</ul>
+									</p>
+							</ul>
+
+							<div class="container border-top-generic"> <h7>Стоимость 11 900&#8381;</h7>
+									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
+
+							</div>
+
+						</blockquote>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+<!--			Конец Прайс-->
+
+	</div>
+</section>
+
+
+<!--	<section class="button-area">-->
+<!--									<div class="container border-top-generic">-->
+<!--								&lt;!&ndash;			<div class="button-group-area mt-10">&ndash;&gt;-->
+<!--								-->
+<!--											<a href="#" class="genric-btn primary circle">Primary</a>-->
+<!--								-->
+<!--								&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--									</div>-->
+<!--	</section>-->
+{% endblock %}
+

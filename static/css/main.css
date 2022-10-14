@@ -2464,7 +2464,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     text-align: center; }
     .top-category-widget-area .single-cat-widget .overlay-bg {
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0, 0, 0, 0.55);
       margin: 7%;
       -webkit-transition: all 0.3s ease 0s;
       -moz-transition: all 0.3s ease 0s;
@@ -2489,7 +2489,7 @@ body.mobile-nav-active #mobile-nav-toggle {
         width: 60%;
         height: 1%; }
     .top-category-widget-area .single-cat-widget:hover .overlay-bg {
-      background: rgba(0, 147, 223, 0.85);
+      background: rgba(60, 179, 114, 0.75);
       margin: 7%;
       -webkit-transition: all 0.3s ease 0s;
       -moz-transition: all 0.3s ease 0s;

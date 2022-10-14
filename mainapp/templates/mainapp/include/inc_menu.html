@@ -15,11 +15,11 @@
         </li>
 
         <li class="menu-has-children">
-            <a class="{% if request.resolver_match.url_name == 'training'%} active {% endif %}"
-               href="{% url 'training' %}">Тренировки</a>
+            <a class="{% if request.resolver_match.url_name == 'training' or 'online' or 'offline'%} active {% endif %}"
+               href="{% url 'training:index' %}">Тренировки</a>
             <ul>
-                <li><a href="blog-home.html">Онлайн курсы</a></li>
-                <li><a href="{% url 'offline' %}">Очные занятия</a></li>
+                <li><a href="{% url 'training:online' %}">Онлайн курсы</a></li>
+                <li><a href="{% url 'training:offline' %}">Очные занятия</a></li>
             </ul>
         </li>
         <li class="menu-has-children"><a href="">Pages</a>

@@ -44,3 +44,28 @@ class TrainOffListView(TitleContextMixin, ListView):
     title = 'Оффлайн занятия - YogaHanna'
     template_name = 'mainapp/offline.html'
     model = User
+
+
+class TrainOnListView(TitleContextMixin, ListView):
+    title = 'Онлайн занятия - YogaHanna'
+    template_name = 'mainapp/online.html'
+    model = User
+
+
+class TrainOnFirstListView(TitleContextMixin, ListView):
+    title = 'Каждый день | Курс - YogaHanna'
+    template_name = 'mainapp/daily_course.html'
+    model = User
+
+
+class TrainOnSecListView(TitleContextMixin, ListView):
+    title = 'Зарядка | Курс - YogaHanna'
+    template_name = 'mainapp/online.html'
+    model = User
+
+
+class TrainOnThirdListView(TitleContextMixin, ListView):
+    title = 'Красивая шея | Курс - YogaHanna'
+    template_name = 'mainapp/online.html'
+    model = User
+
