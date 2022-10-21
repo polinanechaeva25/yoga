@@ -13,7 +13,7 @@
 						Оффлайн занятия
 					</h1>
 					<p class="link-nav"><a href="{% url 'training:index' %}">Тренировки </a>
-						<span class="lnr lnr-arrow-right"></span> <a href="{% url 'training:offline' %}">
+						<span class="lnr lnr-arrow-right grey"></span> <a href="{% url 'training:offline' %}">
 							Оффлайн занятия</a></p>
 				</div>
 			</div>
@@ -31,7 +31,8 @@
 					<div class="col-md-3">
 						<img src="{% static 'img/elements/room.jpg' %}" alt="" class="img-fluid">
 					</div>
-					<div class="col-md-9 mt-sm-20 left-align-p">
+
+					<div class="col-md-6 mt-sm-20 left-align-p">
 						<p>Очные встречи проходят в г.Владимире по адресу ул.Песочная, 2Д.
 							Подробнее смотрите на страничке <a href="{% url 'contact' %}">контакты</a>.
 							Есть возможность персональных занятий, цены и график утачняйте по почте или What'sApp.<br>
@@ -39,6 +40,10 @@
 							и скорректируем нагрузку и для 13-летней девушки, и для 70-летней женщины.
 						</p>
 					</div>
+					<div class="col-md-3">
+						<img src="{% static 'img/elements/group.png' %}" alt="" class="img-fluid">
+					</div>
+
 				</div>
 			</div>
 		</div>

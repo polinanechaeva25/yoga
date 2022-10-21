@@ -87,7 +87,7 @@ $black			: #000;
   font-weight: 300; }
 
 body {
-  color: #c0c0c0;
+  color: #777777;;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -276,7 +276,8 @@ th {
   margin-top: 25px; }
 
 .mt-30 {
-  margin-top: 30px; }
+  margin-top: 30px;
+ }
 
 .mt-35 {
   margin-top: 35px; }
@@ -301,6 +302,9 @@ th {
 
 .mt-120 {
   margin-top: 120px; }
+
+.mt-140 {
+  margin-top: 140px; }
 
 .mt-150 {
   margin-top: 150px; }
@@ -457,6 +461,9 @@ th {
 
 .pb-30 {
   padding-bottom: 30px; }
+
+.pb-35 {
+  padding-bottom: 35px; }
 
 .pb-40 {
   padding-bottom: 40px; }
@@ -742,6 +749,13 @@ th {
   .switch-wrap p {
     margin: 0; }
 
+.row .left-align-p:hover p a {
+    color: #90EE90;
+}
+.row .left-align-p p a {
+    color: #3CB371;
+}
+
 /*---------- End Elements Page -------------*/
 .sample-text-area {
   background: #f9f9ff;
@@ -796,7 +810,15 @@ h1, h2, h3, h4, h5, h6 {
   background: #f9f9ff; }
   .button-area .border-top-generic {
     padding: 70px 15px;
-    border-top: 1px dotted #eee; }
+    border-top: 1px dotted #eee;}
+     .course{
+        padding-bottom: 20px;}
+     .price{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 30%;
+        height: 35%;}
 
 .button-group-area .genric-btn {
   margin-right: 10px;
@@ -842,6 +864,9 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center; }
     .genric-btn.arrow span {
       margin-left: 10px; }
+    .morning{
+    bottom: 40px;
+    left: 160px;}
   .genric-btn.default {
     color: #222222;
     background: #f9f9ff;
@@ -976,8 +1001,13 @@ h1, h2, h3, h4, h5, h6 {
   .progress-table .serial {
     width: 30%;
     padding-left: 30px; }
+  .progress-table .serial-price {
+    width: 15%;
+    padding-left: 30px; }
   .progress-table .country {
     width: 28.07%; }
+  .progress-table .country-price {
+    width: 25%; }
   .progress-table .visit {
     width: 19.74%; }
   .progress-table .percentage {
@@ -985,7 +1015,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 50px; }
   .progress-table .table-head {
     display: flex; }
-    .progress-table .table-head .serial, .progress-table .table-head .country, .progress-table .table-head .visit, .progress-table .table-head .percentage {
+    .progress-table .table-head .serial, .progress-table .table-head .serial-price, .progress-table .table-head .country, .progress-table .table-head .country-price, .progress-table .table-head .visit, .progress-table .table-head .percentage {
       color: #222222;
       line-height: 40px;
       text-transform: uppercase;
@@ -994,10 +1024,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px 0;
     border-top: 1px solid #edf3fd;
     display: flex; }
-    .progress-table .table-row .serial, .progress-table .table-row .country, .progress-table .table-row .visit, .progress-table .table-row .percentage {
+    .progress-table .table-row .serial, .progress-table .table-row .serial-price, .progress-table .table-row .country, .progress-table .table-row .country-price, .progress-table .table-row .visit, .progress-table .table-row .percentage {
       display: flex;
       align-items: center; }
     .progress-table .table-row .country img {
+      margin-right: 15px; }
+    .progress-table .table-row .country-price img {
       margin-right: 15px; }
     .progress-table .table-row .percentage .progress {
       width: 80%;
@@ -1635,6 +1667,7 @@ h1, h2, h3, h4, h5, h6 {
       .header-top .header-top-right a .lnr {
         display: none;
         font-weight: 700; }
+
       .header-top .header-top-right a.book-now {
         background: #3CB371;
         color: #fff;
@@ -1649,7 +1682,8 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-block; }
       .header-top .header-top-right a .text {
         display: none; } }
-
+.grey{
+    color: #c0c0c0}
 .top-head-btn {
   background: #3CB371;
   padding: 9px 26px; }
@@ -2256,6 +2290,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 .team-area .thumb img {
   display: block;
   width: 100%; }
+  .morn{
+    width: 262px;
+    height: 380px;
+    object-fit: cover; }
 .team-area .thumb div span {
   display: block;
   position: absolute;
@@ -2312,18 +2350,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-    .cta-img .extra {
+  transform: translateX(-50%);}
+    .extra {
       position: absolute;
       bottom: -40px;
       left: 50%;
       z-index: 10;
-
       -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
-      -o-transform: translateX(-50%);
-     }
- }
+      -o-transform: translateX(-50%);}
+    .neck{
+        -webkit-transform:translateY(-7%);
+        left: 65%;}
   @media (max-width: 768px) {
     .cta-img {
       bottom: -27px; } }
@@ -2431,7 +2469,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* =================================== */
 /*============ Start Blog Home Styles  =============*/
 .blog-home-banner {
-  background: url(../img/blog/blog-home-banner.jpg) bottom;
+  background: url(../img/blog/blog.jpg) bottom;
   background-size: cover;
   padding: 130px 0px; }
   .blog-home-banner h1 span {
@@ -2548,6 +2586,14 @@ body.mobile-nav-active #mobile-nav-toggle {
       color: #222222; }
     .post-content-area .single-post .feature-img img {
       width: 100%; }
+    .post-content-area .single-post .feature-img img.neck {
+        width: 730px;
+        height: 480px;
+        object-fit: cover; }
+    .post-content-area .single-post .feature-img img.blog {
+        width: 730px;
+        height: 350px;
+        object-fit: cover; }
     .post-content-area .single-post .posts-title h3 {
       margin: 20px 0px; }
     .post-content-area .single-post .excert {

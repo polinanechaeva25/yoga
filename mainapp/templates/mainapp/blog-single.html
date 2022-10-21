@@ -1,0 +1,218 @@
+{% extends 'mainapp/base.html'%}
+{%load static%}
+
+{%block 'banner' %}
+
+<!-- start banner Area -->
+<section class="banner-area relative about-banner" id="home">
+    <img class="cta-img img-fluid pb-35" src="{% static 'img/resting.png' %}" width="400" alt="">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1>
+                    Blog Details
+                </h1>
+                <p class="link-nav"><a href="{% url 'index' %}">Главная </a>
+                    <span class="lnr lnr-arrow-right grey"></span>
+                    <a href="{% url 'blog' %}">
+                        Блог
+                    </a>
+                    <span class="lnr lnr-arrow-right grey"></span>
+                    <a href="{% url 'blog_single' object.id %}">
+                        Пост
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+
+{% endblock %}
+
+{%block 'content' %}
+<!-- Start post-content Area -->
+<section class="post-content-area single-post-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 posts-list">
+                <div class="single-post row">
+                    <div class="col-lg-12">
+                        <h3 class="mt-20 mb-20">{{object}}</h3>
+                        <div class="feature-img mb-30">
+                            <img class="img-fluid blog" src="/media/{{ object.image }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <p>
+                            {{object.short_description}}
+                        </p>
+                    </div>
+                    <div class="col-lg-12">
+
+                        <div class="row mt-30 mb-30">
+                            <div class="col-6">
+                                <img class="img-fluid" src="/media/{{ object.extra_img_1 }}" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid" src="/media/{{ object.extra_img_2 }}" alt="">
+                            </div>
+                            <div class="col-lg-12 mt-30">
+                                <p>
+                                    {{object.description_1}}
+                                </p>
+
+                            </div>
+
+                            <div class="row mt-30 mb-30">
+                                <div class="col-6">
+                                    <img class="img-fluid" src="/media/{{ object.extra_img_3 }}" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <img class="img-fluid" src="/media/{{ object.extra_img_4 }}" alt="">
+                                </div>
+                                <div class="col-lg-12 mt-30">
+
+                                    <p class="excert">
+                                        {{object.description_2}}
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--                Боковой блок-->
+                <div class="col-lg-4 sidebar-widgets">
+                    <div class="widget-wrap">
+                        <div class="single-sidebar-widget search-widget">
+                            <form class="search-form" action="#">
+                                <input placeholder="Поиск по названию:" name="search" type="text"
+                                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Поиск по названию:'">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="single-sidebar-widget popular-post-widget">
+                            <h4 class="popular-title">Популярные посты</h4>
+                            <div class="popular-post-list">
+                                <div class="single-post-list d-flex flex-row align-items-center">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src=" {% static 'img/blog/pp1.jpg' %} " alt="">
+                                    </div>
+                                    <div class="details">
+                                        <a href="blog-single.html"><h6>Калининград</h6></a>
+                                        <p>12 дней назад</p>
+                                    </div>
+                                </div>
+                                <div class="single-post-list d-flex flex-row align-items-center">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src=" {% static 'img/blog/pp2.jpg' %} " alt="">
+                                    </div>
+                                    <div class="details">
+                                        <a href="blog-single.html"><h6>Ретрит на Байкале</h6></a>
+                                        <p>3 месяца назад</p>
+                                    </div>
+                                </div>
+                                <div class="single-post-list d-flex flex-row align-items-center">
+                                    <div class="thumb">
+                                        <img class="img-fluid" src=" {% static 'img/blog/pp3.jpg' %} " alt="">
+                                    </div>
+                                    <div class="details">
+                                        <a href="blog-single.html"><h6>Германия</h6></a>
+                                        <p>1,5 года назад</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-sidebar-widget ads-widget">
+                            <a href="#"><img class="img-fluid" src=" {% static 'img/blog/ads-banner.jpg' %} "
+                                             alt=""></a>
+                        </div>
+                        <div class="single-sidebar-widget post-category-widget">
+                            <h4 class="category-title">Категории постов</h4>
+                            <ul class="cat-list">
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Питание</p>
+                                        <p>3</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Отдых</p>
+                                        <p>2</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Практики</p>
+                                        <p>12</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Путешествия</p>
+                                        <p>9</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Рецепты</p>
+                                        <p>24</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="single-sidebar-widget newsletter-widget">
+                            <h4 class="newsletter-title">Получать рассылку</h4>
+                            <p>
+                                Здесь вы можете оформить подписку на получение навостей о новых событиях в моем блоге и
+                                новых курсах на этом сайте.
+                            </p>
+                            <div class="form-group d-flex flex-row">
+                                <div class="col-autos">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-envelope"
+                                                                             aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroup"
+                                               placeholder="Введите email:" onfocus="this.placeholder = ''"
+                                               onblur="this.placeholder = 'Введите email:'">
+                                    </div>
+                                </div>
+                                <a href="#" class="bbtns">Подписаться</a>
+                            </div>
+                            <p class="text-bottom">
+                                Вы можете отписаться в любой момент.
+                            </p>
+                        </div>
+                        <div class="single-sidebar-widget tag-cloud-widget">
+                            <h4 class="tagcloud-title">Поиск по тегам</h4>
+                            <ul>
+                                <li><a href="#">СтильЖизни</a></li>
+                                <li><a href="#">Архитектура</a></li>
+                                <li><a href="#">Мода</a></li>
+                                <li><a href="#">Еда</a></li>
+                                <li><a href="#">Рецепты</a></li>
+                                <li><a href="#">Искусство</a></li>
+                                <li><a href="#">Поездки</a></li>
+                                <li><a href="#">Вдохновение</a></li>
+                                <li><a href="#">Польза</a></li>
+                                <li><a href="#">Наука</a></li>
+                                <li><a href="#">Практики</a></li>
+                                <li><a href="#">Энергия</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--                Конец бокового блока-->
+            </div>
+        </div>
+</section>
+<!-- End post-content Area -->
+
+{% endblock %}

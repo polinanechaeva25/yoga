@@ -14,7 +14,7 @@
 						YogaHanna каджый день
 					</h1>
 					<p class="link-nav"><a href="{% url 'training:online' %}">Онлайн курсы </a>
-						<span class="lnr lnr-arrow-right"></span> <a href="{% url 'training:daily' %}">
+						<span class="lnr lnr-arrow-right grey"></span> <a href="{% url 'training:daily' %}">
 							Ежедневные занятия</a></p>
 				</div>
 			</div>
@@ -40,20 +40,6 @@
 
 					</div>
 				</div>
-
-
-<!--				<div class="col-md-4 mt-sm-30 typo-sec">-->
-<!--					<h3 class="mb-20">Базовые составные части программы</h3>-->
-<!--					<div class="">-->
-<!--						<ul class="unordered-list">-->
-<!--							<li>Физическая практика. Асаны и переходы.</li>-->
-<!--							<li>Дыхание. Очищение организма – шаткармы.</li>-->
-<!--							<li>Работа с внутренним стержнем – энергетической осью.-->
-<!--							</li>-->
-<!--							<li>Медитация.</li>-->
-<!--						</ul>-->
-<!--					</div>-->
-<!--				</div>-->
 
 				<div class="col-md-4 mt-sm-30 typo-sec">
 					<h3 class="mb-20">Базовые составные части программы</h3>
@@ -233,80 +219,125 @@
 
 <!--			Прайс-->
 
-
-
 			<div class="section-top-border">
-				<h3 class="mb-30">Тарифы</h3>
-				<div class="row">
 					<div class="col-lg-12">
-						<blockquote class="generic-blockquote">
-							<h3>Лайт</h3><br>
+						<div class="section-title-wrap text-center">
+							<h1>Прайс</h1>
+						</div>
+					</div>
+				<div class="progress-table-wrap">
+					<div class="progress-table">
+						<div class="table-head">
+							<div class="serial-price">Тарифы</div>
+							<div class="country-price">Лайт</div>
+							<div class="country-price">Стандарт</div>
+							<div class="country-price">Премиум</div>
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="plus">
+								6 модулей &mdash; 18 уроков</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="25" alt="plus">
+								6 модулей &mdash; &nbsp; <s>18 уроков</s><h6> &nbsp; 30 уроков</h6></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="25" alt="plus">
+								6 модулей &mdash; &nbsp; <s>18 уроков</s><h6> &nbsp; 30 уроков</h6></div>
 
-							<ul class="unordered-list">
-									<p><h5>6 модулей - 18 уроков</h5></p>
-									<p><h5>Поддержка в групповом чате</h5></p>
-									<p><h5>6 онлайн встреч с автором, для обсуждения вопросов по курсу</h5></p>
-									<p><h5>Дополнительные материалы:</h5><br>
-										<ul>
-											<li><h6>"20 упражнений для красивого лица"</h6></li>
-											<li><h6>"4 техники для укрепления иммунитета"</h6></li>
-										</ul>
-									</p>
-							</ul>
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="plus">
+								Поддержка в групповом чате</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="plus">
+								Поддержка в групповом чате</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="plus">
+								Поддержка в групповом чате</div>
 
-							<div class="container border-top-generic"> <h7>Стоимость 2 000&#8381;</h7>
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="plus">
+								6 онлайн встреч с автором, для обсуждения вопросов по курсу</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="plus">
+								6 онлайн встреч с автором, для обсуждения вопросов по курсу</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="25" alt="plus">
+								<h7><s>6 онлайн встреч с автором</s><br><h6>6 персональных тренировок</h6></h7></div>
+
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price">
+								Дополнительные материалы:</div>
+							<div class="country-price">
+								Дополнительные материалы:</div>
+							<div class="country-price">
+								Дополнительные материалы:</div>
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;20 упражнений для красивого лица&raquo;</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;20 упражнений для красивого лица&raquo;</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;20 упражнений для красивого лица&raquo;</div>
+
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;4 техники для укрепления иммунитета&raquo;</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;4 техники для укрепления иммунитета&raquo;</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;4 техники для укрепления иммунитета&raquo;</div>
+
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price"> <img src="{% static 'img/elements/non.png' %}" width="15" alt="flag">
+								<s>&laquo;10 рецептов вегетарианских блюд&raquo;</s></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;10 рецептов вегетарианских блюд&raquo;</div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								&laquo;10 рецептов вегетарианских блюд&raquo;</div>
+
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price"> <img src="{% static 'img/elements/non.png' %}" width="15" alt="flag">
+								<s>Мини-курс &laquo;йога для фотосессии&raquo;</s></div>
+							<div class="country-price"> <img src="{% static 'img/elements/non.png' %}" width="15" alt="flag">
+								<s>Мини-курс &laquo;йога для фотосессии&raquo;</s></div>
+							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
+								Мини-курс &laquo;йога для фотосессии&raquo;</div>
+
+						</div>
+						<div class="table-row">
+							<div class="serial-price"></div>
+							<div class="country-price">
+								<div class="container border-top-generic"> <h6 class="course">Стоимость 2 000&#8381;</h6>
 									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
+
+								</div>
+							</div>
+							<div class="country-price">
+
+								<div class="container border-top-generic"> <h6 class="course">Стоимость 3 500&#8381;</h6>
+									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
+
+								</div>
+
+							</div>
+							<div class="country-price">
+
+								<div class="container border-top-generic"> <h6 class="course">Стоимость 11 900&#8381;</h6>
+									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
+
+								</div>
 
 							</div>
 
-						</blockquote>
-
-						<blockquote class="generic-blockquote">
-							<h3>Стандарт</h3><br>
-
-							<ul class="unordered-list">
-									<p><h5>6 модулей - 30 уроков</h5></p>
-									<p><h5>Поддержка в групповом чате</h5></p>
-									<p><h5>6 онлайн встреч с автором, для обсуждения вопросов по курсу</h5></p>
-									<p><h5>Дополнительные материалы:</h5><br>
-										<ul>
-											<li><h6>"20 упражнений для красивого лица"</h6></li>
-											<li><h6>"4 техники для укрепления иммунитета"</h6></li>
-											<li><h6>"10 рецептов вегетарианских блюд"</h6></li>
-										</ul>
-									</p>
-							</ul>
-
-							<div class="container border-top-generic"> <h7>Стоимость 3 500&#8381;</h7>
-									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
-
-							</div>
-
-						</blockquote>
-
-						<blockquote class="generic-blockquote">
-							<h3>Люкс</h3><br>
-
-							<ul class="unordered-list">
-									<p><h5>6 модулей - 30 уроков</h5></p>
-									<p><h5>Поддержка в групповом чате</h5></p>
-									<p><h4>6 персональных тренировок</h4></p>
-									<p><h5>Дополнительные материалы:</h5><br>
-										<ul>
-											<li><h6>"20 упражнений для красивого лица"</h6></li>
-											<li><h6>"4 техники для укрепления иммунитета"</h6></li>
-											<li><h6>"10 рецептов вегетарианских блюд"</h6></li>
-											<li><h6>+ мини - курс "йога для фотосессии"</h6></li>
-										</ul>
-									</p>
-							</ul>
-
-							<div class="container border-top-generic"> <h7>Стоимость 11 900&#8381;</h7>
-									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
-
-							</div>
-
-						</blockquote>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -318,15 +349,5 @@
 	</div>
 </section>
 
-
-<!--	<section class="button-area">-->
-<!--									<div class="container border-top-generic">-->
-<!--								&lt;!&ndash;			<div class="button-group-area mt-10">&ndash;&gt;-->
-<!--								-->
-<!--											<a href="#" class="genric-btn primary circle">Primary</a>-->
-<!--								-->
-<!--								&lt;!&ndash;			</div>&ndash;&gt;-->
-<!--									</div>-->
-<!--	</section>-->
 {% endblock %}
 

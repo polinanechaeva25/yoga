@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 # from django.shortcuts import render
+from mainapp.models import Posts
 
 
 class TitleContextMixin:
@@ -60,12 +61,25 @@ class TrainOnFirstListView(TitleContextMixin, ListView):
 
 class TrainOnSecListView(TitleContextMixin, ListView):
     title = 'Зарядка | Курс - YogaHanna'
-    template_name = 'mainapp/online.html'
+    template_name = 'mainapp/morning.html'
     model = User
 
 
 class TrainOnThirdListView(TitleContextMixin, ListView):
     title = 'Красивая шея | Курс - YogaHanna'
-    template_name = 'mainapp/online.html'
+    template_name = 'mainapp/neck.html'
     model = User
+
+
+class BlogListView(TitleContextMixin, ListView):
+    title = 'Блог - YogaHanna'
+    template_name = 'mainapp/blog-home.html'
+    model = Posts
+
+
+class BlogDetailView(TitleContextMixin, DetailView):
+    title = 'Блог | Пост - YogaHanna'
+    template_name = 'mainapp/blog-single.html'
+    model = Posts
+
 
