@@ -14,7 +14,6 @@ class Posts(models.Model):
     extra_img_2 = models.ImageField(upload_to='extra_foto', blank=True)
     extra_img_3 = models.ImageField(upload_to='extra_foto', blank=True)
     extra_img_4 = models.ImageField(upload_to='extra_foto', blank=True)
-    extra_img_5 = models.ImageField(upload_to='extra_foto', blank=True)
     tag_1 = models.CharField(verbose_name='тэг 1', blank=True, max_length=16)
     tag_2 = models.CharField(verbose_name='тэг 2', blank=True, max_length=16)
     tag_3 = models.CharField(verbose_name='тэг 3', blank=True, max_length=16)
@@ -23,3 +22,15 @@ class Posts(models.Model):
 
     def __str__(self):
         return self.headers
+
+
+class Comment(models.Model):
+    user_name = models.CharField(verbose_name='имя', max_length=128)
+    email = models.EmailField(max_length=254, unique=True)
+    experience = models.CharField(verbose_name='продолжительность занятий', max_length=16)
+    comment = models.TextField(verbose_name='комментарий', max_length=254)
+    photo = models.ImageField(upload_to='comment_photo')
+
+    def __str__(self):
+        return self.user_name
+

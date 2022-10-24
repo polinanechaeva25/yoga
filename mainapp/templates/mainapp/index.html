@@ -222,100 +222,25 @@
 
 			<div class="row">
 				<div class="active-testimonial-carusel">
+					{% for comment in comment_list %}
 					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/Елена Шестакова.png' %}" height="80" alt="">
+						<img class="mx-auto rounded-circle" src="/media/{{ comment.photo }}" height="80" alt="">
 						<p class="desc">
-							Неделя медосномтра просто СУПЕР! Эффект чувствуется практически сразу. Все уроки очень понравились, но,
-							пожалуй, Урок 2 мне стоит включить в ежедневную практику. Боль в тазобедренном суставе успокоилась после
-							этого урока. Спасибо огромное!
+							{{comment.comment}}
 						</p>
-						<h4>Ирина</h4>
+						<h4>{{comment}}</h4>
 						<p>
-							занимается 5 лет
+							занимается {{comment.experience}}
 						</p>
 					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/Надежда Байраак.png' %}" height="80" alt="">
-						<p class="desc">
-							У меня такое чувство, что расправился позвоночник в грудном отделе (как после сеанса мануального терапевта).
-							Иприбавилось энергии.
-						</p>
-						<h4>Надежда</h4>
-						<p>
-							занимается 3 года
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/Анна Туманова.png' %}" height="80" alt="">
-						<p class="desc">
-							Спина воспряла, Ваше наставление помогает сделать над собой усилие и благополучно завершить практику, а мне всегда сложно
-							просто взять в руки коврик и заставить себя заниматься!
-						</p>
-						<h4>Анна</h4>
-						<p>
-							занимается 2 месяца
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t1.png' %}" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector,
-							hardware and more. laptop accessory
-						</p>
-						<h4>Helena Phillips</h4>
-						<p>
-							CEO at Facebook
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t2.png' %}" alt="">
-						<p class="desc">
-							It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has
-							been achieving great heights so far as its.
-						</p>
-						<h4>Cordelia Barton</h4>
-						<p>
-							CEO at Twitter
-						</p>
-					</div>
+					{% endfor %}
+
 					<div class="single-testimonial item">
 						<img class="mx-auto rounded-circle" src="{% static 'img/t3.png' %}" alt="">
 						<p class="desc">
-							About 64% of all on-line teens say that do things online that they wouldn’t want their parents to know about. 11% of all
-							adult internet users visit dating websites.
-						</p>
-						<h4>Carrie Reese</h4>
-						<p>
-							CEO at Google
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t1.png' %}" alt="">
-						<p class="desc">
-							Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector,
-							hardware and more. laptop accessory
-						</p>
-						<h4>Helena Phillips</h4>
-						<p>
-							CEO at Facebook
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t2.png' %}" alt="">
-						<p class="desc">
-							It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has
-							been achieving great heights so far as its.
-						</p>
-						<h4>Cordelia Barton</h4>
-						<p>
-							CEO at Twitter
-						</p>
-					</div>
-					<div class="single-testimonial item">
-						<img class="mx-auto rounded-circle" src="{% static 'img/t3.png' %}" alt="">
-						<p class="desc">
-							About 64% of all on-line teens say that do things online that they wouldn’t want their parents to know about. 11% of all
-							adult internet users visit dating websites.
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+							tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+							quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
 						</p>
 						<h4>Carrie Reese</h4>
 						<p>
@@ -361,57 +286,21 @@
 			</div>
 
 			<div class="row">
+
+				{% for post in object_list %}
 				<div class="col-lg-4 col-md-6 col-sm-12 single-blog">
 					<div class="thumb">
-						<img class="img-fluid" src="{% static 'img/kalin.jpg' %}" style="width:'220px'; height:'360px'"  alt="">
+						<img class="img-fluid main-blog" src="/media/{{ post.image }}" alt="">
 					</div>
-					<a href="single-blog.html"><h4>AQUA CAMP - Калининград</h4></a>
+					<a href={% url 'blog_single' post.id %}><h4>{{ post.headers }}</h4></a>
 					<div class="text-wrap">
 						<p>
-							Насыщенный тур - море, заливы, реки, озёра Калининградской области.
-							Мой первый опыт яхтинга, sup-сёрфинга и сплава на байдарках в самых живописных местах.
+							{{ post.short_description }}
 						</p>
 					</div>
-					<div class="meta-bottom d-flex">
-						<p><span class="lnr lnr-calendar-full"></span> 15 Авг</p>
-						<p><span class="lnr lnr-heart"></span> 45</p>
-						<p><span class="lnr lnr-bubble"></span> 7</p>
-					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12 single-blog">
-					<div class="thumb">
-						<img class="img-fluid" src="{% static 'img/baikal.jpg' %}" alt="">
-					</div>
-					<a href="single-blog.html"><h4>Ретрит на Байкале</h4></a>
-					<div class="text-wrap">
-						<p>
-							Остров Огой. Место мистическое, место силы. Как, впрочем, и весь Байкал. Но здесь,
-							где находится Всеблагая Ступа Великого Просветления, дарующая освобождение через видение,
-							это ощущается особенно остро.
-						</p>
-					</div>
-					<div class="meta-bottom d-flex">
-						<p><span class="lnr lnr-calendar-full"></span> 18 Июн</p>
-						<p><span class="lnr lnr-heart"></span> 26</p>
-						<p><span class="lnr lnr-bubble"></span> 3</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12 single-blog">
-					<div class="thumb">
-						<img class="img-fluid" src="{% static 'img/abhaz.jpg' %}" alt="">
-					</div>
-					<a href="single-blog.html"><h4>Його-тур Абхазия</h4></a>
-					<div class="text-wrap">
-						<p>
-							Практики прямо на брегу моря наедине с шумящим бризом. Поиск душевного равновесия и гармонии с собой.
-						</p>
-					</div>
-					<div class="meta-bottom d-flex">
-						<p><span class="lnr lnr-calendar-full"></span> 20 Июл</p>
-						<p><span class="lnr lnr-heart"></span> 20</p>
-						<p><span class="lnr lnr-bubble"></span> 6</p>
-					</div>
-				</div>
+				{% endfor %}
+
 			</div>
 		</div>
 	</section>

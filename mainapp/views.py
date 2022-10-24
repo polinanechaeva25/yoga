@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView
 # from django.shortcuts import render
-from mainapp.models import Posts
+from mainapp.models import Posts, Comment
 
 
 class TitleContextMixin:
@@ -20,8 +20,16 @@ class TitleContextMixin:
 class MainListView(TitleContextMixin, ListView):
     title = 'YogaHanna'
     template_name = 'mainapp/index.html'
-    model = User
+    model = Posts
 
+    def get_context_data(self, **kwargs):
+        context = super(TitleContextMixin, self).get_context_data(**kwargs)
+        context.update(
+            title=self.get_title()
+        )
+        context['object_list'] = context['object_list'][:3]
+        context['comment_list'] = Comment.objects.all()[:9]
+        return context
 
 class ContactListView(TitleContextMixin, ListView):
     title = 'Контакты - YogaHanna'

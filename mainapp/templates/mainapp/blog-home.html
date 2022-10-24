@@ -34,14 +34,14 @@
 <!--															pl-0-->
 						<div class="col-lg-2  col-md-3 meta-details ">
 							<ul class="tags">
-								<li><a href="#">&#9839;{{post.tag_1}}</a></li>
-								<li><a href="#">&#9839;{{post.tag_2}}</a></li>
-								<li><a href="#">&#9839;{{post.tag_3}}</a></li>
-								<li><a href="#">&#9839;{{post.tag_4}}</a></li>
-								<li><a href="#">&#9839;{{post.tag_5}}</a></li>
+								<li><a href="#">{% if post.tag_1 %}&#9839;{% endif %}{{post.tag_1}}</a></li>
+								<li><a href="#">{% if post.tag_2 %}&#9839;{% endif %}{{post.tag_2}}</a></li>
+								<li><a href="#">{% if post.tag_3 %}&#9839;{% endif %}{{post.tag_3}}</a></li>
+								<li><a href="#">{% if post.tag_4 %}&#9839;{% endif %}{{post.tag_4}}</a></li>
+								<li><a href="#">{% if post.tag_5 %}&#9839;{% endif %}{{post.tag_5}}</a></li>
 							</ul>
 							<div class="user-details row">
-								<p class="date col-lg-12 col-md-12 col-6">
+								<p class="date col-lg-12 col-md-12 col-6 date-size">
 									<a href="#">{{post.add_datetime|date:"d M, Y"}}</a>
 									<span class="lnr lnr-calendar-full"></span>
 								</p>
@@ -56,7 +56,7 @@
 
 
 
-							<a class="posts-title" href="blog-single.html"><h3>{{ post.headers }}</h3></a>
+							<a class="posts-title" href="{% url 'blog_single' post.id %}"><h3>{{ post.headers }}</h3></a>
 							<p class="excert">
 								{{ post.short_description }}
 							</p>
@@ -91,6 +91,8 @@
 						</ul>
 					</nav>
 				</div>
+
+<!--				Боковой блок-->
 				<div class="col-lg-4 sidebar-widgets">
 					<div class="widget-wrap">
 						<div class="single-sidebar-widget search-widget">
@@ -102,33 +104,19 @@
 						<div class="single-sidebar-widget popular-post-widget">
 							<h4 class="popular-title">Популярные посты</h4>
 							<div class="popular-post-list">
+
+								{% for post in object_list %}
 								<div class="single-post-list d-flex flex-row align-items-center">
 									<div class="thumb">
-										<img class="img-fluid" src=" {% static 'img/blog/pp1.jpg' %} " alt="">
+										<img class="img-fluid side-block" src="/media/{{ post.image }}" alt="">
 									</div>
 									<div class="details">
-										<a href="blog-single.html"><h6>Калининград</h6></a>
-										<p>12 дней назад</p>
+										<a href="blog-single.html"><h6>{{ post }}</h6></a>
+										<p>{{ post.add_datetime|date:"d M, Y" }}</p>
 									</div>
 								</div>
-								<div class="single-post-list d-flex flex-row align-items-center">
-									<div class="thumb">
-										<img class="img-fluid" src=" {% static 'img/blog/pp2.jpg' %} " alt="">
-									</div>
-									<div class="details">
-										<a href="blog-single.html"><h6>Ретрит на Байкале</h6></a>
-										<p>3 месяца назад</p>
-									</div>
-								</div>
-								<div class="single-post-list d-flex flex-row align-items-center">
-									<div class="thumb">
-										<img class="img-fluid" src=" {% static 'img/blog/pp3.jpg' %} " alt="">
-									</div>
-									<div class="details">
-										<a href="blog-single.html"><h6>Германия</h6></a>
-										<p>1,5 года назад</p>
-									</div>
-								</div>
+								{% endfor %}
+
 							</div>
 						</div>
 						<div class="single-sidebar-widget ads-widget">

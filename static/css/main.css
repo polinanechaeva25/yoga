@@ -2230,6 +2230,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 30px; } }
 
 .single-testimonial {
+  min-height: 481px;
   text-align: center;
   padding: 30px;
   text-align: center;
@@ -2317,6 +2318,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   opacity: 1; }
 .team-area .meta-text p {
   margin: 0; }
+
+.main-blog{
+    width: 360px;
+    height: 220px;
+    object-fit: cover; }
+
+.blog-extra{
+    width: 350px;
+    height: 250px;
+    object-fit: cover; }
+
 
 /*-------- Start Cta area Style   -------------*/
 .cta-one-area {
@@ -2742,7 +2754,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   .widget-wrap .popular-post-widget .popular-post-list {
     margin-top: 30px; }
     .widget-wrap .popular-post-widget .popular-post-list .thumb img {
-      width: 100%; }
+        width: 100px;
+        height: 60px;
+        object-fit: cover; }
   .widget-wrap .popular-post-widget .single-post-list {
     margin-bottom: 20px; }
     .widget-wrap .popular-post-widget .single-post-list .details {
@@ -2863,7 +2877,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     .widget-wrap .tag-cloud-widget ul li a {
       font-size: 12px;
       color: #222222; }
-
+.date-size{
+    font-size: 12px;}
 /*============ End Blog Home Styles  =============*/
 /*============ Start Blog Single Styles  =============*/
 .single-post-area {
@@ -2995,6 +3010,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     .comments-area .btn-reply:hover {
       background-color: #3CB371;
       color: #fff; }
+.contact-details a{
+    color: #222222;}
+.contact-details a:hover {
+    color: #3CB371;}
 
 .comment-form {
   background: #fafaff;
