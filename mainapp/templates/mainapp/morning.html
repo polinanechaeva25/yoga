@@ -5,7 +5,7 @@
 <!-- start banner Area -->
 	<section class="banner-area relative about-banner" id="home">
 		<img class="cta-img img-fluid" src="{% static 'img/morning.png' %}"
-			 style="-webkit-transform:translateX(-130%); transform:translateX(-130%);" width="310" alt="">
+			 style="-webkit-transform:translateX(-155%); transform:translateX(-155%);" width="280" alt="">
 		<div class="overlay overlay-bg"></div>
 		<div class="container">
 			<div class="row d-flex align-items-center justify-content-center">
@@ -13,9 +13,11 @@
 					<h1>
 						Утренние зарядки
 					</h1>
-					<p class="link-nav"><a href="{% url 'training:online' %}">Онлайн курсы </a>
-						<span class="lnr lnr-arrow-right grey"></span> <a href="{% url 'training:morning' %}">
-							Зарядка</a></p>
+					<p class="link-nav"><a href="{% url 'training:index' %}">Тренировки </a>
+						<span class="lnr lnr-arrow-right grey"></span>
+						<a href="{% url 'training:online' %}">Онлайн курсы </a>
+						<span class="lnr lnr-arrow-right grey"></span>
+						<a href="{% url 'training:morning' %}">Зарядка</a></p>
 				</div>
 			</div>
 		</div>

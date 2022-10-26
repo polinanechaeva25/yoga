@@ -1,0 +1,96 @@
+{%load static%}
+
+<div class="col-lg-4 sidebar-widgets">
+    <div class="widget-wrap">
+        <div class="single-sidebar-widget search-widget">
+            <form class="search-form" action="{% url 'blog_name' %}" method="GET">
+                <input placeholder="Поиск по названию:" name="posts_title" type="text"
+                       onfocus="this.placeholder = ''" onblur="this.placeholder = 'Поиск по названию:'">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="single-sidebar-widget popular-post-widget">
+            <h4 class="popular-title">Популярные посты</h4>
+            <div class="popular-post-list">
+
+                {% for post in pop_posts %}
+                <div class="single-post-list d-flex flex-row align-items-center">
+                    <div class="thumb">
+                        <img class="img-fluid side-block" src="/media/{{ post.image }}" alt="">
+                    </div>
+                    <div class="details">
+                        <a href="{% url 'blog_single' post.id %}"><h6>{{ post }}</h6></a>
+                        <p>{{ post.add_datetime|date:"d M, Y" }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        <div class="single-sidebar-widget ads-widget">
+            <a href="#"><img class="img-fluid" src=" {% static 'img/blog/ads-banner.jpg' %} "
+                             alt=""></a>
+        </div>
+        <div class="single-sidebar-widget post-category-widget">
+            <h4 class="category-title">Категории постов</h4>
+            <ul class="cat-list">
+
+                <li>
+                    <a href="{% url 'blog' %}" class="d-flex justify-content-between">
+                        <p>Все посты</p>
+                        <p>{{ post_quantity |length }}</p>
+                    </a>
+                </li>
+
+                {% for post in posts_categories%}
+                <li>
+                    <a href="{% url 'blog_category' post.category %}" class="d-flex justify-content-between">
+                        <p>{{ post.category }}</p>
+                        <p>{{ post.the_count }}</p>
+                    </a>
+                </li>
+                {% endfor %}
+
+
+            </ul>
+        </div>
+        <div class="single-sidebar-widget newsletter-widget">
+            <h4 class="newsletter-title">Получать рассылку</h4>
+            <p>
+                Здесь вы можете оформить подписку на получение навостей о новых событиях в моем блоге и
+                новых курсах на этом сайте.
+            </p>
+            <div class="form-group d-flex flex-row">
+                <div class="col-autos">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-envelope"
+                                                             aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup"
+                               placeholder="Введите email:" onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Введите email:'">
+                    </div>
+                </div>
+                <a href="#" class="bbtns">Подписаться</a>
+            </div>
+            <p class="text-bottom">
+                Вы можете отписаться в любой момент.
+            </p>
+        </div>
+        <div class="single-sidebar-widget tag-cloud-widget">
+            <h4 class="tagcloud-title">Поиск по тегам</h4>
+            <ul>
+
+                {% for tag in posts_tags  %}
+
+                    <li><a href="{% url 'blog_tag' tag %}">  {{ tag }}</a></li>
+
+                {% endfor %}
+
+
+            </ul>
+        </div>
+    </div>
+</div>

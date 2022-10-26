@@ -75,28 +75,30 @@
 					</div>
 				</div>
 				<div class="col-lg-8" style=" margin-top: 50px">
+
 					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								<input name="name" placeholder="Введите Ваше имя:" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите Ваше имя:'"
-								 class="common-input mb-20 form-control" required="" type="text">
+								{% csrf_token %}
 
-								<input name="email" placeholder="Введите Ваш email:" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Введите Ваш email:'" class="common-input mb-20 form-control" required="" type="email">
-
-								<input name="subject" placeholder="Введите тему:" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите тему:'"
-								 class="common-input mb-20 form-control" required="" type="text">
+								{{ input_form.as_p }}
 							</div>
 							<div class="col-lg-6 form-group">
-								<textarea class="common-textarea form-control" name="message" placeholder="Введите сообщение:" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Введите сообщение:'" required=""></textarea>
+								{% csrf_token %}
+
+								{{ mess_form.as_p }}
 							</div>
 							<div class="col-lg-12">
 								<div class="alert-msg" style="text-align: left;"></div>
 								<button class="genric-btn primary" style="float: right;">Отправить сообщение</button>
 							</div>
 						</div>
+
+
+
+
 					</form>
+
 				</div>
 			</div>
 		</div>
