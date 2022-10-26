@@ -60,21 +60,26 @@
                 Здесь вы можете оформить подписку на получение навостей о новых событиях в моем блоге и
                 новых курсах на этом сайте.
             </p>
-            <div class="form-group d-flex flex-row">
-                <div class="col-autos">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"><i class="fa fa-envelope"
-                                                             aria-hidden="true"></i>
+            <form class="navbar-form" action="/email/follow/" method="post">
+                <div class="form-group d-flex flex-row">
+
+                    <div class="col-autos">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
                             </div>
+                                {% csrf_token %}
+
+                                {{ input_follow_form }}
                         </div>
-                        <input type="text" class="form-control" id="inlineFormInputGroup"
-                               placeholder="Введите email:" onfocus="this.placeholder = ''"
-                               onblur="this.placeholder = 'Введите email:'">
                     </div>
+
+                    <button class="bbtns" style="border-width: 0;">Подписаться</button>
+
                 </div>
-                <a href="#" class="bbtns">Подписаться</a>
-            </div>
+             </form>
             <p class="text-bottom">
                 Вы можете отписаться в любой момент.
             </p>

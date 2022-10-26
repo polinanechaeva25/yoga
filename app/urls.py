@@ -5,7 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from mainapp.views import MainListView, ContactListView, AboutListView, BlogListView, BlogDetailView, \
-    BlogCategoryListView, BlogTagListView, BlogNameListView
+    BlogCategoryListView, BlogTagListView, BlogNameListView, EmailListView, EmailFollowView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,6 +14,8 @@ urlpatterns = [
     path('about/', AboutListView.as_view(), name='about'),
     path('training/', include('mainapp.urls', namespace='training')),
     path('blog/', BlogListView.as_view(), name='blog'),
+    path('email/', EmailListView.as_view(), name='email'),
+    path('email/follow/', EmailFollowView.as_view(), name='follow'),
     path('blog/name/', BlogNameListView.as_view(), name='blog_name'),
     path('blog/<int:pk>/', BlogDetailView.as_view(), name='blog_single'),
     path('blog/category/<str:pk>/', BlogCategoryListView.as_view(), name='blog_category'),

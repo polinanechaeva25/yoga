@@ -115,16 +115,15 @@
 					<div class="single-footer-widget">
 						<h4>Подпишитесь на рассылку.</h4>
 						<p>Вы можете нам доверять, мы не рассылаем спам.</p>
-						<div class="d-flex flex-row" id="mc_embed_signup">
+						<div class="d-flex flex-row">
 
-							<form class="navbar-form" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get">
+							<form class="navbar-form" action="/email/follow/" method="post">
 								<div class="input-group add-on align-items-center d-flex">
-									<input class="form-control" name="email" placeholder="Ваш email:" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваш email:'"
-									 required="" type="email">
-									<div style="position: absolute; left: -5000px;">
-										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-									</div>
+									{% csrf_token %}
+
+									{{ input_follow_form }}
+
+
 									<div class="input-group-btn">
 										<button class="genric-btn"><span class="lnr lnr-arrow-right"></span></button>
 									</div>

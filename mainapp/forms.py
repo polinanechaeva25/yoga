@@ -14,3 +14,8 @@ class MessageForm(forms.Form):
     message = forms.CharField(max_length=2000, widget=forms.Textarea(attrs={'class': 'common-textarea form-control',
                                                                             'cols': '30', 'rows': "10",
                                                                             'placeholder': "Введите сообщение:"}), label='')
+
+
+class FollowForm(forms.Form):
+    email_address = forms.EmailField(max_length=150,
+                                     widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': "Ваш email:"}), label='')

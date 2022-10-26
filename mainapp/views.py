@@ -1,12 +1,19 @@
 import random
 
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Count, Q
-from django.views.generic import ListView, DetailView
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import redirect, render
+from django.views import View
+from django.views.generic import ListView, DetailView, TemplateView
 # from django.shortcuts import render
-from mainapp.forms import ContactForm, MessageForm
+from mainapp.forms import ContactForm, MessageForm, FollowForm
 from mainapp.models import Posts, Comment
+from django.core.mail import send_mail, BadHeaderError
+
+from .forms import ContactForm, MessageForm, FollowForm
 
 
 class TitleContextMixin:
@@ -19,6 +26,8 @@ class TitleContextMixin:
         context.update(
             title=self.get_title()
         )
+        input_follow_form = FollowForm()
+        context['input_follow_form'] = input_follow_form
         return context
 
 
@@ -84,6 +93,8 @@ class MainListView(TitleContextMixin, ListView):
         )
         context['object_list'] = context['object_list'][:3]
         context['comment_list'] = Comment.objects.all()[:9]
+        input_follow_form = FollowForm()
+        context['input_follow_form'] = input_follow_form
 
         return context
 
@@ -102,6 +113,8 @@ class ContactListView(TitleContextMixin, ListView):
         mess_form = MessageForm()
         context['input_form'] = input_form
         context['mess_form'] = mess_form
+        input_follow_form = FollowForm()
+        context['input_follow_form'] = input_follow_form
         return context
 
 
@@ -175,6 +188,8 @@ class BlogCategoryListView(TitleContextMixin, CategoryPopTagsContextMixin, ListV
             title=self.get_title()
         )
         context['posts_list'] = Posts.objects.filter(category=self.kwargs['pk'])
+        input_follow_form = FollowForm()
+        context['input_follow_form'] = input_follow_form
 
         return context
 
@@ -190,9 +205,12 @@ class BlogTagListView(TitleContextMixin, CategoryPopTagsContextMixin, ListView):
             title=self.get_title()
         )
 
-        context['posts_list'] = Posts.objects.filter(tag_1=self.kwargs['pk']) | Posts.objects.filter(
-            tag_2=self.kwargs['pk']) | Posts.objects.filter(tag_3=self.kwargs['pk']) | Posts.objects.filter(
-            tag_4=self.kwargs['pk']) | Posts.objects.filter(tag_5=self.kwargs['pk'])
+        tag = self.kwargs['pk']
+        context['posts_list'] = Posts.objects.filter(
+            Q(tag_1=tag) | Q(tag_2=tag) | Q(tag_3=tag) | Q(tag_4=tag) | Q(tag_5=tag)
+        )
+        input_follow_form = FollowForm()
+        context['input_follow_form'] = input_follow_form
 
         return context
 
@@ -204,5 +222,63 @@ class BlogNameListView(TitleContextMixin, CategoryPopTagsContextMixin, ListView)
 
     def get_queryset(self):
         title = self.request.GET.get('posts_title')
+        # posts_list = Posts.objects.filter(Q(headers__icontains=title) | Q(short_description__icontains=title))
         posts_list = Posts.objects.filter(headers__icontains=title)
         return posts_list
+
+
+class EmailListView(View):
+
+    form_class1 = ContactForm
+    form_class2 = MessageForm
+
+    def get(self, request):
+        return redirect("contact")
+
+    def post(self, request):
+
+        cont_form = self.form_class1(request.POST)
+        mess_form = self.form_class2(request.POST)
+        if cont_form.is_valid() and mess_form.is_valid():
+            body = {
+                'name': cont_form.cleaned_data['name'],
+                'subject': cont_form.cleaned_data['subject'],
+                'email': cont_form.cleaned_data['email_address'],
+                'message': mess_form.cleaned_data['message'],
+            }
+            subject = f"Клиентский запрос, ТЕМА: {body['subject']}"
+            message = f'Email: {body["email"]}\nName:{body["name"]}\nMessage:\n{body["message"]}.'
+
+            try:
+                print(f'sending message: {message}')
+                send_mail(subject, message, settings.EMAIL_HOST_USER, ['polina2000_21@mail.ru'])
+            except BadHeaderError:
+                print('Nope')
+                return HttpResponse('Invalid header found.')
+            return redirect("contact")
+
+
+class EmailFollowView(View):
+
+    form_class = FollowForm
+
+    def get(self, request):
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+    def post(self, request):
+
+        follow_form = self.form_class(request.POST)
+        if follow_form.is_valid():
+            body = {
+                'email': follow_form.cleaned_data['email_address'],
+            }
+            subject = f"Запрос на подписку от: {body['email']}"
+            message = f'Email: {body["email"]}.'
+
+            try:
+                print(f'sending message: {message}')
+                send_mail(subject, message, settings.EMAIL_HOST_USER, ['polina2000_21@mail.ru'])
+            except BadHeaderError:
+                print('Nope')
+                return HttpResponse('Invalid header found.')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
