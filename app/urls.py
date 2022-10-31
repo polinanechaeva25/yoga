@@ -4,8 +4,8 @@ from django.conf import settings
 # from django.conf.urls import include
 from django.conf.urls.static import static
 
-from mainapp.views import MainListView, ContactListView, AboutListView, BlogListView, BlogDetailView, \
-    BlogCategoryListView, BlogTagListView, BlogNameListView, EmailListView, EmailFollowView
+from mainapp.views import MainListView, ContactListView, AboutListView, EmailListView, EmailFollowView, CommentView, \
+    CommentCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,13 +13,11 @@ urlpatterns = [
     path('contact/', ContactListView.as_view(), name='contact'),
     path('about/', AboutListView.as_view(), name='about'),
     path('training/', include('mainapp.urls', namespace='training')),
-    path('blog/', BlogListView.as_view(), name='blog'),
+    path('blog/', include('blogapp.urls', namespace='blog')),
     path('email/', EmailListView.as_view(), name='email'),
     path('email/follow/', EmailFollowView.as_view(), name='follow'),
-    path('blog/name/', BlogNameListView.as_view(), name='blog_name'),
-    path('blog/<int:pk>/', BlogDetailView.as_view(), name='blog_single'),
-    path('blog/category/<str:pk>/', BlogCategoryListView.as_view(), name='blog_category'),
-    path('blog/tag/<str:pk>/', BlogTagListView.as_view(), name='blog_tag'),
+    path('comment/', CommentView.as_view(), name='comment'),
+    path('comment/create/', CommentCreateView.as_view(), name='create'),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2069,6 +2069,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     .banner-content .primary-btn:hover {
       background-color: #fff;
       color: #3CB371; }
+.create-comment {
+  text-align: center; }
+  @media (max-width: 767px) {
+    .create-comment {
+      padding: 0 10%; } }
+  .create-comment .primary-btn {
+    font-size: 13px; }
+    .create-comment .primary-btn:hover {
+      background-color: #fff;
+      color: #3CB371; }
 
 /*-------- End Banner Area ------------*/
 /*-------- Start About Us Area ------------*/
@@ -2193,6 +2203,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------- Start testimonial Area -------------*/
 .testomial-area .owl-carousel .owl-item img {
   width: auto !important; }
+.testomial-area .owl-carousel .owl-item img.comment-img{
+    width: 80px !important;
+    height: 80px;
+    object-fit: cover; }
 .testomial-area .owl-dots {
   text-align: center;
   bottom: 5px;
@@ -2230,12 +2244,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 30px; } }
 
 .single-testimonial {
-  min-height: 481px;
+  min-height: 514px;
   text-align: center;
   padding: 30px;
   text-align: center;
   background: #f0fff0;
   margin: 20px;
+  overflow-y: auto;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -3014,6 +3029,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #222222;}
 .contact-details a:hover {
     color: #3CB371;}
+
+.comment{
+    display: flex;
+    align-items: center;
+    justify-content: center;}
 
 .comment-form {
   background: #fafaff;

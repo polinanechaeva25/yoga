@@ -25,12 +25,61 @@ class Posts(models.Model):
 
 
 class Comment(models.Model):
+    DAILY = 'Онлайн курс "Ежедневные треннировки"'
+    MORNING = 'Онлайн курс "Утренние разминки"'
+    NECK = 'Онлайн курс "Красивая шея"'
+    OFFLINE_GROUP = 'Очные занятия в студии'
+    OFFLINE_PRIVACY = 'Персональные тренировки оффлайн'
+    NOTHING = ''
+
+    COURSE_CHOICES = (
+        (DAILY, 'Ежедневные треннировки'),
+        (MORNING, 'Утренние разминки'),
+        (NECK, 'Красивая шея'),
+        (OFFLINE_GROUP, 'Оффлайн - групповые'),
+        (OFFLINE_PRIVACY, 'Оффлайн - персональные'),
+        (NOTHING, 'Другое'),
+    )
+
+    LESS_MONTH = 'Занимается менее месяца'
+    ONE_MONTH = 'Занимается 1 месяц'
+    TWO_MONTHS = 'Занимается 2 месяца'
+    THREE_MONTHS = 'Занимается 3 месяца'
+    FOUR_MONTHS = 'Занимается 4 месяца'
+    FIVE_MONTHS = 'Занимается 5 месяцев'
+    SIX_MONTHS = 'Занимается 6 месяцев'
+    MORE_HALF_YEAR = 'Занимается более полугода'
+    ONE_YEAR = 'Занимается 1 год'
+    TWO_YEARS = 'Занимается 2 года'
+    THREE_YEARS = 'Занимается 3 года'
+    MORE_THREE_YEARS = 'Занимается более трех лет'
+    NOTHING = 'Ещё не занимается'
+
+    EXPERIENCE_CHOICES = (
+        (LESS_MONTH, 'Менее месяца'),
+        (ONE_MONTH, '1 месяц'),
+        (TWO_MONTHS, '2 месяца'),
+        (THREE_MONTHS, '3 месяца'),
+        (FOUR_MONTHS, '4 месяца'),
+        (FIVE_MONTHS, '5 месяцев'),
+        (SIX_MONTHS, '6 месяцев'),
+        (MORE_HALF_YEAR, 'Более полугода'),
+        (ONE_YEAR, '1 год'),
+        (TWO_YEARS, '2 года'),
+        (THREE_YEARS, '3 года'),
+        (MORE_THREE_YEARS, 'Более 3-х лет'),
+        (NOTHING, 'Не занимался/(-ась)'),
+    )
+
     user_name = models.CharField(verbose_name='имя', max_length=128)
     email = models.EmailField(max_length=254, unique=True)
-    experience = models.CharField(verbose_name='продолжительность занятий', max_length=16)
+    is_checked = models.BooleanField(verbose_name='подтверждение почты', db_index=True, default=False)
+    course = models.CharField(verbose_name='название курса', max_length=36, choices=COURSE_CHOICES, blank=False,
+                              default=NOTHING)
+    experience = models.CharField(verbose_name='продолжительность занятий', max_length=25, choices=EXPERIENCE_CHOICES,
+                                  blank=False, default=NOTHING)
     comment = models.TextField(verbose_name='комментарий', max_length=254)
-    photo = models.ImageField(upload_to='comment_photo')
+    photo = models.ImageField(upload_to='comment_photo', blank=True, default='/unknowing/default.png')
 
     def __str__(self):
         return self.user_name
-

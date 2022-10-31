@@ -3,7 +3,7 @@
 <div class="col-lg-4 sidebar-widgets">
     <div class="widget-wrap">
         <div class="single-sidebar-widget search-widget">
-            <form class="search-form" action="{% url 'blog_name' %}" method="GET">
+            <form class="search-form" action="{% url 'blog:name' %}" method="GET">
                 <input placeholder="Поиск по названию:" name="posts_title" type="text"
                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Поиск по названию:'">
                 <button type="submit"><i class="fa fa-search"></i></button>
@@ -19,7 +19,7 @@
                         <img class="img-fluid side-block" src="/media/{{ post.image }}" alt="">
                     </div>
                     <div class="details">
-                        <a href="{% url 'blog_single' post.id %}"><h6>{{ post }}</h6></a>
+                        <a href="{% url 'blog:single' post.id %}"><h6>{{ post }}</h6></a>
                         <p>{{ post.add_datetime|date:"d M, Y" }}</p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
             <ul class="cat-list">
 
                 <li>
-                    <a href="{% url 'blog' %}" class="d-flex justify-content-between">
+                    <a href="{% url 'blog:index' %}" class="d-flex justify-content-between">
                         <p>Все посты</p>
                         <p>{{ post_quantity |length }}</p>
                     </a>
@@ -44,7 +44,7 @@
 
                 {% for post in posts_categories%}
                 <li>
-                    <a href="{% url 'blog_category' post.category %}" class="d-flex justify-content-between">
+                    <a href="{% url 'blog:category' post.category %}" class="d-flex justify-content-between">
                         <p>{{ post.category }}</p>
                         <p>{{ post.the_count }}</p>
                     </a>
@@ -90,7 +90,7 @@
 
                 {% for tag in posts_tags  %}
 
-                    <li><a href="{% url 'blog_tag' tag %}">  {{ tag }}</a></li>
+                    <li><a href="{% url 'blog:tag' tag %}">  {{ tag }}</a></li>
 
                 {% endfor %}
 

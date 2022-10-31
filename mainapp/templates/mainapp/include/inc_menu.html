@@ -10,8 +10,11 @@
             Обо мне</a>
         </li>
 
-        <li><a class="{% if request.resolver_match.view_name == 'blog' or request.resolver_match.view_name == 'blog_single'%} active {% endif %}" href="{% url 'blog' %}">
-            Блог</a>
+        <li>
+            <a class="{% if request.resolver_match.view_name == 'blog:index' or request.resolver_match.view_name == 'blog:single' or request.resolver_match.view_name == 'blog:tag' or request.resolver_match.view_name == 'blog:name' or request.resolver_match.view_name == 'blog:category'%} active {% endif %}"
+            href="{% url 'blog:index' %}">
+                Блог
+            </a>
         </li>
 
         <li class="menu-has-children">
@@ -22,6 +25,7 @@
                 <li><a href="{% url 'training:offline' %}">Очные занятия</a></li>
             </ul>
         </li>
-        <li><a class="{% if request.resolver_match.view_name == 'contact'%} active {% endif %}" href="{% url 'contact' %}">Контакты</a></li>
+        <li><a class="{% if request.resolver_match.view_name == 'contact'%} active {% endif %}"
+               href="{% url 'contact' %}">Контакты</a></li>
     </ul>
 </nav>
