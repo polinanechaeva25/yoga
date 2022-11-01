@@ -303,8 +303,10 @@ th {
 .mt-120 {
   margin-top: 120px; }
 
-.mt-140 {
-  margin-top: 140px; }
+@media (min-width: 992px){
+    .mt-140 {
+         margin-top: 140px; };}
+
 
 .mt-150 {
   margin-top: 150px; }
@@ -842,12 +844,56 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px dotted #eee;}
      .course{
         padding-bottom: 20px;}
-     .price{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 30%;
-        height: 35%;}
+     @media (min-width: 2560px){
+         .price{
+            position: absolute;
+            left:70%;
+            right: 0;
+            bottom: 0;
+            width: 30%;
+            height: 35%;};}
+     @media (min-width: 1200px) and (max-width: 2559px){
+         .price{
+            position: absolute;
+            left:70%;
+            right: 0;
+            bottom: 0;
+            width: 30%;
+            height: 35%;};}
+     @media (min-width: 993px) and (max-width: 1199px){
+         .price{
+            position: absolute;
+            left:70%;
+            right: 0;
+            bottom: 0;
+            width: 17%;
+            height: 65%;};}
+
+     @media (min-width: 768px) and (max-width: 992px){
+         .price{
+            margin-top: 30px;
+            width: 100%;};}
+     @media (min-width: 425px) and (max-width: 767px){
+         .price{
+            margin-top: 30px;
+            width: 100%;};}
+     @media (min-width: 375px) and (max-width: 424px){
+         .price{
+            margin-top: 20px;
+            width: 90%;};}
+     @media (min-width: 320px) and (max-width: 374px){
+         .price{
+            margin-top: 20px;
+            width: 90%;};}
+     @media (max-width: 319px){
+         .price{
+            margin-top: 20px;
+            width: 90%;};}
+     @media (max-width: 319px){
+        .fs-13{
+            font-size: 13px;};}
+
+
 
 .button-group-area .genric-btn {
   margin-right: 10px;
@@ -893,9 +939,35 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center; }
     .genric-btn.arrow span {
       margin-left: 10px; }
-    .morning{
-    bottom: 40px;
-    left: 160px;}
+      @media (min-width: 1200px) {
+          .morning{
+            bottom: 40px;
+            left: 160px;};}
+      @media (min-width: 993px) and (max-width: 1199px) {
+          .morning{
+            bottom: 40%;
+            left: 10%;};}
+      @media (min-width: 768px) and (max-width: 992px) {
+          .morning{
+            bottom: 20%;
+            left: 30%;};}
+      @media (min-width: 425px) and (max-width: 767px) {
+          .morning{
+            bottom: 20%;
+            left: 50%;};}
+      @media (min-width: 375px) and (max-width: 424px) {
+          .morning{
+            bottom: 20%;
+            left: 60%;};}
+      @media (min-width: 320px) and (max-width: 374px) {
+          .morning{
+            bottom: 5%;
+            left: 22%;};}
+      @media (max-width: 319px) {
+          .morning{
+            bottom: 5%;
+            left: 22%;};}
+
   .genric-btn.default {
     color: #222222;
     background: #f9f9ff;
@@ -2152,6 +2224,94 @@ body.mobile-nav-active #mobile-nav-toggle {
         bottom: -17px !important;
         width:470px; };}
 
+@media (min-width: 2560px) {
+    .banner-daily{
+        left:32% !important;
+        width:400px;};}
+@media (min-width: 1440px) and (max-width: 2559px){
+    .banner-daily{
+        left:22% !important;
+        width:400px;};}
+@media (min-width: 768px) and (max-width: 1439px){
+    .banner-daily{
+        left:22% !important;
+        width:350px;};}
+@media (min-width: 577px) and (max-width: 767px){
+    .banner-daily{
+        left:22% !important;
+        width:270px;};}
+@media (max-width: 576px){
+    .banner-daily{
+        display: none;};}
+
+@media (min-width: 2560px) {
+    .banner-morning{
+        left:32% !important;
+        width:280px;};}
+@media (min-width: 1440px) and (max-width: 2559px){
+    .banner-morning{
+        left:22% !important;
+        width:280px;};}
+@media (min-width: 768px) and (max-width: 1439px){
+    .banner-morning{
+        left:15% !important;
+        bottom:-6% !important;
+        width:224px;};}
+@media (min-width: 577px) and (max-width: 767px){
+    .banner-morning{
+        left:14% !important;
+        bottom:-5% !important;
+        width:164px;};}
+@media (max-width: 576px){
+    .banner-morning{
+        display: none;};}
+
+@media (min-width: 2560px) {
+    .banner-neck{
+        left:65% !important;
+        top: 32%;
+        width:400px;};}
+@media (min-width: 1440px) and (max-width: 2559px){
+    .banner-neck{
+        left:76% !important;
+        top: 32%;
+        width:400px;};}
+@media (min-width: 768px) and (max-width: 1439px){
+    .banner-neck{
+        left:76% !important;
+        top: 44%;
+        width:330px;};}
+@media (min-width: 577px) and (max-width: 768px){
+    .banner-neck{
+        left:76% !important;
+        top: 49%;
+        width:270px;};}
+@media (min-width: 440px) and (max-width: 576px){
+    .banner-neck{
+       left:76% !important;
+        top: 56%;
+        width:203px;};}
+@media (max-width: 439px){
+    .banner-neck{
+       display:none;};}
+
+@media (min-width: 1024px){
+    .banner-post {
+        width:400px; };}
+@media (min-width: 768px) and (max-width: 1023px){
+    .banner-post {
+        bottom: -41px !important;
+        width:400px; };}
+@media (min-width: 425px) and (max-width: 767px){
+    .banner-post {
+        bottom: -41px !important;
+        width:285px; };}
+@media (max-width: 424px){
+    .banner-post {
+        bottom: -41px !important;
+        width:235px; };}
+
+
 
 /*-------- End Banner Area ------------*/
 /*-------- Start About Us Area ------------*/
@@ -2417,6 +2577,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 250px;
     object-fit: cover; }
 
+.single-team div.thumb{
+    text-align: center !important;}
+
 
 /*-------- Start Cta area Style   -------------*/
 .cta-one-area {
@@ -2459,9 +2622,6 @@ body.mobile-nav-active #mobile-nav-toggle {
       -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       -o-transform: translateX(-50%);}
-    .neck{
-        -webkit-transform:translateY(-7%);
-        left: 65%;}
   @media (max-width: 768px) {
     .cta-img {
       bottom: -27px; } }
@@ -2519,7 +2679,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------- Start Common Page Style   -------------*/
 .link-nav {
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 .about-banner {
   background: url(../img/banner-bg.jpg) right no-repeat;
