@@ -756,6 +756,35 @@ th {
     color: #3CB371;
 }
 
+@media (min-width: 2560px) {
+    .about-matter{
+        left:75% !important;
+        width:750px;};}
+@media (min-width: 1440px) and (max-width: 2559px){
+    .about-matter{
+        left:75% !important;
+        width:720px;};}
+@media (min-width: 1024px) and (max-width: 1439px){
+    .about-matter{
+        left:75% !important;
+        width:510px;};}
+@media (min-width: 768px) and (max-width: 1023px){
+    .about-matter{
+        left:65% !important;
+        width:510px;};}
+@media (min-width: 425px) and (max-width: 767px){
+    .about-matter{
+        left:65% !important;
+        width:280px;};}
+@media (min-width: 375px) and (max-width: 424px){
+    .about-matter{
+        left:60% !important;
+        width:280px;};}
+@media (max-width: 374px){
+    .about-matter{
+        left:55% !important;
+        width:250px;};}
+
 /*---------- End Elements Page -------------*/
 .sample-text-area {
   background: #f9f9ff;
@@ -1963,6 +1992,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #008000; }
 
 .primary-btn {
+  z-index: 11;
   background: #3CB371;
   line-height: 42px;
   padding-left: 30px;
@@ -2023,6 +2053,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: 0;
   bottom: 0; }
 
+@media (min-width: 768px) and (max-width: 1023px){
+    .start{
+        bottom: -33px !important;
+        width:420px;};}
+@media (max-width: 767px){
+    .start{
+        bottom: -25px !important;
+        width:325px;};}
+
+
 /*-------- Start Banner Area ------------*/
 .banner-area {
   background: url(../img/banner-bg.jpg) center;
@@ -2079,6 +2119,39 @@ body.mobile-nav-active #mobile-nav-toggle {
     .create-comment .primary-btn:hover {
       background-color: #fff;
       color: #3CB371; }
+
+@media(min-width: 768px){
+    .banner {
+        width:550px; };}
+@media(min-width: 425px) and (max-width: 767px){
+    .banner {
+        bottom: -25px !important;
+        width:350px; };}
+@media (max-width: 424px){
+    .banner {
+        bottom: -24px !important;
+        width:300px; };}
+
+@media(min-width: 769px){
+    .banner-online {
+        width:750px; };}
+@media(min-width: 577px) and (max-width: 768px){
+    .banner-online {
+        bottom: -25px !important;
+        width:550px; };}
+@media (min-width: 425px) and (max-width: 576px){
+    .banner-online {
+        bottom: -25px !important;
+        width:470px; };}
+@media (min-width: 320px) and (max-width: 424px){
+    .banner-online {
+        bottom: -21px !important;
+        width:470px; };}
+@media (max-width: 319px){
+    .banner-online {
+        bottom: -17px !important;
+        width:470px; };}
+
 
 /*-------- End Banner Area ------------*/
 /*-------- Start About Us Area ------------*/
@@ -2446,7 +2519,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------- Start Common Page Style   -------------*/
 .link-nav {
   margin-top: 10px;
-  margin-bottom: 0px; }
+  margin-bottom: 10px; }
 
 .about-banner {
   background: url(../img/banner-bg.jpg) right no-repeat;
@@ -2491,6 +2564,29 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: 600; }
 
 /*-------- End Common Page Style   -------------*/
+/* =================================== */
+/*  Training Styles
+/* =================================== */
+/*============ Start Training Home Styles  =============*/
+@media (min-width: 768px){
+    .training{
+        left:75% !important;
+        width:340px;};}
+
+@media (min-width: 577px) and (max-width: 767px){
+    .training{
+        left:75% !important;
+        width:280px;};}
+@media (min-width: 425px) and (max-width: 576px){
+    .training{
+        left:75% !important;
+        width:170px;
+        bottom: -20px;};}
+@media (max-width: 424px){
+    .training{
+        display: none;};}
+
+/*-------- End Training Home Style   -------------*/
 /* =================================== */
 /*  Blog Styles
 /* =================================== */

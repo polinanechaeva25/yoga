@@ -1,13 +1,11 @@
-import random
-
 from django.conf import settings
 from django.contrib.auth.models import User
-from django.forms import modelformset_factory
+
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import redirect, render
-from django.urls import reverse_lazy
+from django.shortcuts import redirect
+
 from django.views import View
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView
 from django.core.mail import send_mail, BadHeaderError
 
 
@@ -41,7 +39,7 @@ class MainListView(TitleContextMixin, ListView):
             title=self.get_title()
         )
         context['object_list'] = context['object_list'][:3]
-        context['comment_list'] = Comment.objects.order_by('?')[:9]
+        context['comment_list'] = Comment.objects.filter(is_checked=True).order_by('?')[:9]
         input_follow_form = FollowForm()
         context['input_follow_form'] = input_follow_form
 
@@ -200,4 +198,3 @@ class CommentCreateView(CreateView):
         else:
 
             return HttpResponse('Неверно заполненная форма. Попробуйте еще раз.')
-
