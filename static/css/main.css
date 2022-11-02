@@ -968,6 +968,10 @@ h1, h2, h3, h4, h5, h6 {
             bottom: 5%;
             left: 22%;};}
 
+@media (min-width: 992px) and (max-width: 1199px){
+    .morn-day{
+        min-height: 160px;} }
+
   .genric-btn.default {
     color: #222222;
     background: #f9f9ff;
@@ -1511,6 +1515,7 @@ h1, h2, h3, h4, h5, h6 {
       background: url(../img/elements/success-check.png) no-repeat center center/cover;
       border: none; }
 
+
 .disabled-checkbox {
   width: 16px;
   height: 16px;
@@ -1542,8 +1547,11 @@ h1, h2, h3, h4, h5, h6 {
       cursor: not-allowed;
       z-index: 3; }
     .disabled-checkbox input:checked + label {
+      width: 16px;
+      height: 16px;
       background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
       border: none; }
+
 
 .primary-radio {
   width: 16px;
@@ -2125,6 +2133,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   top: 0;
   bottom: 0; }
 
+@media (min-width: 1024px) {
+    .start{
+        width:520px;};}
 @media (min-width: 768px) and (max-width: 1023px){
     .start{
         bottom: -33px !important;
@@ -2311,7 +2322,39 @@ body.mobile-nav-active #mobile-nav-toggle {
         bottom: -41px !important;
         width:235px; };}
 
+@media (min-width: 1024px){
+    .online-courses{
+        margin-left: 30px;
+        margin-right: 30px;}}
+@media (min-width: 768px) and (max-width: 1023px){
+    .online-courses{
+        margin-left: 110px;
+        margin-right: 110px;
+        font-size: 17px;}}
+@media (min-width: 425px) and (max-width: 767px){
+    .online-courses{
+        margin-left: 110px;
+        margin-right: 110px;}}
+@media (min-width: 375px) and (max-width: 424px){
+    .online-courses{
+        margin-left: 70px;
+        margin-right: 70px;}}
+@media (min-width: 290px) and (max-width: 374px){
+    .online-courses{
+        margin-left: 30px;
+        margin-right: 30px;}}
+@media (max-width: 290px){
+    .online-courses{
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 12px;}}
 
+@media (min-width: 310px) and (max-width: 379px){
+    .course-name{
+        font-size: 14px;}}
+@media (max-width: 310px){
+    .course-name{
+        font-size: 13px;}}
 
 /*-------- End Banner Area ------------*/
 /*-------- Start About Us Area ------------*/
@@ -2477,7 +2520,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 30px; } }
 
 .single-testimonial {
-  min-height: 514px;
   text-align: center;
   padding: 30px;
   text-align: center;
@@ -2504,6 +2546,30 @@ body.mobile-nav-active #mobile-nav-toggle {
   @media (max-width: 575px) {
     .single-testimonial {
       margin: 15px; } }
+
+@media (min-width: 1200px) {
+    .comment-text{
+        min-height: 242px;};}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .comment-text{
+        min-height: 288px;};}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .course-text{
+        min-height: 34px;};}
+
+@media (max-width: 768px) {
+    .comment-text{
+        min-height: 220px;};}
+
+@media (min-width: 768px) {
+    .arrow-animation{
+        font-size: 40px;
+        display: none !important;};}
+@media (max-width: 768px) {
+    .arrow-animation{
+        font-size: 40px;};}
+
 
 /*--------- End testimonial Area -------------*/
 .team-area.section-gap {

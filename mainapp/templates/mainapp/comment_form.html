@@ -6,7 +6,6 @@
 {%block 'banner' %}
 	<!-- start banner Area -->
 	<section class="banner-area relative about-banner" style="height: 250px;" id="home">
-
 		<div class="overlay overlay-bg"></div>
 		<div class="container">
 			<div class="row d-flex align-items-center justify-content-center">
@@ -25,17 +24,15 @@
 
 		<form class="comment" action="/comment/create/" method="post" enctype="multipart/form-data">
 				<div class="col-lg-6">
-					{% csrf_token %}
 
+					{% csrf_token %}
 					{% crispy comment_form %}
+
 					<div class="col-lg-8 mt-30 mb-60">
 						<div class="alert-msg text-left" ></div>
 						<button class="genric-btn primary float-right">Отправить комментарий</button>
 					</div>
 				</div>
-
-
 		</form>
-
 
 {% endblock %}

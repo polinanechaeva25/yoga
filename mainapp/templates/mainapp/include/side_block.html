@@ -27,10 +27,7 @@
 
             </div>
         </div>
-        <div class="single-sidebar-widget ads-widget">
-            <a href="#"><img class="img-fluid" src=" {% static 'img/blog/ads-banner.jpg' %} "
-                             alt=""></a>
-        </div>
+
         <div class="single-sidebar-widget post-category-widget">
             <h4 class="category-title">Категории постов</h4>
             <ul class="cat-list">
@@ -51,7 +48,6 @@
                 </li>
                 {% endfor %}
 
-
             </ul>
         </div>
         <div class="single-sidebar-widget newsletter-widget">
@@ -60,9 +56,9 @@
                 Здесь вы можете оформить подписку на получение навостей о новых событиях в моем блоге и
                 новых курсах на этом сайте.
             </p>
+
             <form class="navbar-form" action="/email/follow/" method="post">
                 <div class="form-group d-flex flex-row">
-
                     <div class="col-autos">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -70,16 +66,16 @@
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </div>
                             </div>
-                                {% csrf_token %}
 
-                                {{ input_follow_form }}
+                            {% csrf_token %}
+                            {{ input_follow_form }}
+
                         </div>
                     </div>
-
                     <button class="bbtns" style="border-width: 0;">Подписаться</button>
-
                 </div>
              </form>
+
             <p class="text-bottom">
                 Вы можете отписаться в любой момент.
             </p>
@@ -89,11 +85,10 @@
             <ul>
 
                 {% for tag in posts_tags  %}
-
-                    <li><a href="{% url 'blog:tag' tag %}">  {{ tag }}</a></li>
-
+                    <li>
+                        <a href="{% url 'blog:tag' tag %}">{{ tag }}</a>
+                    </li>
                 {% endfor %}
-
 
             </ul>
         </div>

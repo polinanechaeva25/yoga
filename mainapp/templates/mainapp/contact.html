@@ -12,9 +12,11 @@
 					<h1>
 						Контакты
 					</h1>
-					<p class="link-nav"><a href="{% url 'index' %}">Главная </a>
-						<span class="lnr lnr-arrow-right grey"></span> <a href="{% url 'contact' %}">
-							Контакты</a></p>
+					<p class="link-nav">
+						<a href="{% url 'index' %}">Главная </a>
+						<span class="lnr lnr-arrow-right grey"></span>
+						<a href="{% url 'contact' %}">Контакты</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -29,9 +31,11 @@
 
 			<div class="row">
 
-			<script type="text/javascript" charset="utf-8" async
-					src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af5c5fb9cffed4660d3e8493dc17223dfbaa97717fd134c3b3a3196c53a55ef60&amp;
-		width=100%25&amp;height=445&amp;margin-bottom=50&amp;lang=ru_RU&amp;scroll=true"></script>
+				<script type="text/javascript" charset="utf-8" async
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af5c5fb9cffed4660d3e8493dc17223dfbaa97717fd134c3b3a3196c53a55ef60&amp;
+						width=100%25&amp;height=445&amp;margin-bottom=50&amp;lang=ru_RU&amp;scroll=true">
+
+				</script>
 
 				<div class="col-lg-4 d-flex flex-column address-wrap" style=" margin-top: 50px">
 					<div class="single-contact-address d-flex flex-row">
@@ -69,8 +73,8 @@
 						</div>
 						<div class="contact-details">
 							<h5><a href="https://drive.google.com/file/d/1yODhQUp8vSJ4-n4TkHH1u1rqPN5JiZod/view"
-								   target="_blank">Оферта</a></h5>
-
+								   target="_blank">Оферта</a>
+							</h5>
 						</div>
 					</div>
 				</div>
@@ -79,24 +83,22 @@
 					<form class="form-area contact-form text-right" id="Contact" action="/email/" method="post">
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								{% csrf_token %}
 
+								{% csrf_token %}
 								{{ input_form.as_p }}
+
 							</div>
 							<div class="col-lg-6 form-group">
-								{% csrf_token %}
 
+								{% csrf_token %}
 								{{ mess_form.as_p }}
+
 							</div>
 							<div class="col-lg-12">
 								<div class="alert-msg" style="text-align: left;"></div>
 								<button class="genric-btn primary" style="float: right;">Отправить сообщение</button>
 							</div>
 						</div>
-
-
-
-
 					</form>
 
 				</div>

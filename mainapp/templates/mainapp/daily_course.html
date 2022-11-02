@@ -12,11 +12,13 @@
 					<h1>
 						YogaHanna каджый день
 					</h1>
-					<p class="link-nav"><a href="{% url 'training:index' %}">Тренировки </a>
+					<p class="link-nav">
+						<a href="{% url 'training:index' %}">Тренировки </a>
 						<span class="lnr lnr-arrow-right grey"></span>
 						<a href="{% url 'training:online' %}">Онлайн курсы </a>
 						<span class="lnr lnr-arrow-right grey"></span>
-						<a href="{% url 'training:daily' %}">Ежедневные занятия</a></p>
+						<a href="{% url 'training:daily' %}">Ежедневные занятия</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -34,10 +36,12 @@
 					<h3 class="mb-20">Описание</h3>
 					<div class="typography">
 						<p class="typo-list">Программа курса состоит из 6 недель, в каждой из которых есть элементы
-							из четырех базовых частей в различных вариантах.</p>
+							из четырех базовых частей в различных вариантах.
+						</p>
 						<p class="typo-list">Программа строится на знаниях и 15-и летнем опыте преподавания автора.
 							По принципу травмобезопасного продвижения вперед, по мере адаптации к нагрузкам
-							на сердечно сосудистую, мышечную и суставную системы организма.</p>
+							на сердечно сосудистую, мышечную и суставную системы организма.
+						</p>
 
 					</div>
 				</div>
@@ -66,41 +70,23 @@
 
 					</div>
 				</div>
-
-
-
 			</div>
 		</div>
 
 		<div class="section-top-border">
 			<h1 class="mb-30">Детализация модулей</h1>
-<!--			Первый ряд-->
-				<div class="row gallery-item">
-					<div class="col-md-4">
-						<a href="img/elements/g1.jpg"
-						   class="img-gal"><div class="single-gallery-image"
-												style="background: url(/static/img/elements/el1.jpg);
-												 margin-bottom:30px"></div></a>
-					</div>
-					<div class="col-md-4">
-						<a href="img/elements/g2.jpg"
-						   class="img-gal"><div class="single-gallery-image"
-												style="background: url(/static/img/elements/el2.jpg);
-												margin-bottom:30px"></div></a>
-					</div>
-					<div class="col-md-4">
-						<a href="img/elements/g3.jpg"
-						   class="img-gal"><div class="single-gallery-image"
-												style="background: url(/static/img/elements/el3.jpg);
-												margin-bottom:30px"></div></a>
-					</div>
-				</div>
 				<div class="row">
+
 					<div class="col-md-4">
+						<a href="{% static 'img/elements/el1.jpg' %}" class="img-gal">
+							<div class="single-gallery-image" style="background: url(/static/img/elements/el1.jpg);
+								margin-bottom:30px">
+							</div>
+						</a>
 						<div class="single-defination">
 							<h4 class="mb-20">Модуль 1</h4>
 							<p><h6 class="mb-20">Задача:</h6> Познакомиться и освоить базовые практики для суставов
-							и позвоночника.
+								и позвоночника.
 								Научиться правильной технике дыхания и поэтапного расслабления.<br><br>
 								<h6 class="mb-20">Результаты:</h6>
 								<ul class="unordered-list">
@@ -112,12 +98,17 @@
 							</p>
 						</div>
 					</div>
+
 					<div class="col-md-4">
+						<a href="{% static 'img/elements/el2.jpg' %}" class="img-gal">
+							<div class="single-gallery-image" style="background: url(/static/img/elements/el2.jpg);
+								margin-bottom:30px">
+							</div>
+						</a>
 						<div class="single-defination">
 							<h4 class="mb-20">Модуль 2</h4>
 							<p><h6 class="mb-20">Задача:</h6> Начать работать со вниманием и концентрацией.
-							Научиться правильно совмещать дыхание с движением.
-							<br><br>
+								Научиться правильно совмещать дыхание с движением.<br><br>
 								<h6 class="mb-20">Результаты:</h6>
 								<ul class="unordered-list">
 									<li>Освоите начальные техники работы со вниманием и концентрацией.</li>
@@ -128,11 +119,17 @@
 							</p>
 						</div>
 					</div>
+
 					<div class="col-md-4">
+						<a href="{% static 'img/elements/el3.jpg' %}" class="img-gal">
+							<div class="single-gallery-image" style="background: url(/static/img/elements/el3.jpg);
+								margin-bottom:30px">
+							</div>
+						</a>
 						<div class="single-defination">
 							<h4 class="mb-20">Модуль 3</h4>
 							<p><h6 class="mb-20">Задача:</h6> Уяснить принципы сбалансированного питания и почувствовать
-							связь между дыханием и внутренним состоянием.<br><br>
+								связь между дыханием и внутренним состоянием.<br><br>
 								<h6 class="mb-20">Результаты:</h6>
 								<ul class="unordered-list">
 									<li>Познакомитесь с основными принципами питания и позами для программы Detox.</li>
@@ -142,36 +139,17 @@
 							</p>
 						</div>
 					</div>
-				</div>
-<!--			Конец первого ряда-->
 
-<!--			Второй ряд-->
-				<div class="row gallery-item">
 					<div class="col-md-4">
-						<a href="img/elements/g1.jpg"
-						   class="img-gal"><div class="single-gallery-image"
-												style="background: url(/static/img/elements/el4.jpg);
-												 margin-bottom:30px"></div></a>
-					</div>
-					<div class="col-md-4">
-						<a href="img/elements/g2.jpg"
-						   class="img-gal"><div class="single-gallery-image"
-												style="background: url(/static/img/elements/el5.jpg);
-												margin-bottom:30px"></div></a>
-					</div>
-					<div class="col-md-4">
-						<a href="img/elements/g3.jpg"
-						   class="img-gal"><div class="single-gallery-image"
-												style="background: url(/static/img/elements/el6.jpg);
-												margin-bottom:30px"></div></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
+						<a href="{% static 'img/elements/el4.jpg' %}" class="img-gal">
+							<div class="single-gallery-image" style="background: url(/static/img/elements/el4.jpg);
+								margin-bottom:30px">
+							</div>
+						</a>
 						<div class="single-defination">
 							<h4 class="mb-20">Модуль 4</h4>
 							<p><h6 class="mb-20">Задача:</h6> Освоить комплекс, активизирующий внутреннюю энергию
-							и силу.<br><br>
+								и силу.<br><br>
 								<h6 class="mb-20">Результаты:</h6>
 								<ul class="unordered-list">
 									<li>Научитесь делать терапевтические упражнения для улучшения состояния
@@ -182,11 +160,17 @@
 							</p>
 						</div>
 					</div>
+
 					<div class="col-md-4">
+						<a href="{% static 'img/elements/el5.jpg' %}" class="img-gal">
+							<div class="single-gallery-image" style="background: url(/static/img/elements/el5.jpg);
+								margin-bottom:30px">
+							</div>
+						</a>
 						<div class="single-defination">
 							<h4 class="mb-20">Модуль 5</h4>
 							<p><h6 class="mb-20">Задача:</h6> Научиться самостоятельно снимать дискомфорт в спине,
-							очищать организм с помощью дыхания.<br><br>
+								очищать организм с помощью дыхания.<br><br>
 								<h6 class="mb-20">Результаты:</h6>
 								<ul class="unordered-list">
 									<li>Освоите комплекс упражнений «Скорая помощь» при дискомфорте в спине.</li>
@@ -196,12 +180,18 @@
 							</p>
 						</div>
 					</div>
+
 					<div class="col-md-4">
+						<a href="{% static 'img/elements/el6.jpg' %}" class="img-gal">
+							<div class="single-gallery-image" style="background: url(/static/img/elements/el6.jpg);
+								margin-bottom:30px">
+							</div>
+						</a>
 						<div class="single-defination">
 							<h4 class="mb-20">Модуль 6</h4>
 							<p><h6 class="mb-20">Задача:</h6>Снять напряжение в плечах и спине. Освоить полный вариант
-							очищающего дыхания. С помощью медитации наполнить силой позвоночник для входа в ресурсное
-							состояние.<br><br>
+								очищающего дыхания. С помощью медитации наполнить силой позвоночник для входа в ресурсное
+								состояние.<br><br>
 								<h6 class="mb-20">Результаты:</h6>
 								<ul class="unordered-list">
 									<li>Научитесь применять полный вариант очищающего дыхания
@@ -216,7 +206,6 @@
 						</div>
 					</div>
 				</div>
-<!--			Конец второго ряда-->
 
 <!--			Прайс-->
 
@@ -242,7 +231,6 @@
 								6 модулей &mdash; &nbsp; <s>18 уроков</s><h6> &nbsp; 30 уроков</h6></div>
 							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="25" alt="plus">
 								6 модулей &mdash; &nbsp; <s>18 уроков</s><h6> &nbsp; 30 уроков</h6></div>
-
 						</div>
 						<div class="table-row">
 							<div class="serial-price"></div>
@@ -252,7 +240,6 @@
 								Поддержка в групповом чате</div>
 							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="plus">
 								Поддержка в групповом чате</div>
-
 						</div>
 						<div class="table-row">
 							<div class="serial-price"></div>
@@ -262,7 +249,6 @@
 								6 онлайн встреч с автором, для обсуждения вопросов по курсу</div>
 							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="25" alt="plus">
 								<h7><s>6 онлайн встреч с автором</s><br><h6>6 персональных тренировок</h6></h7></div>
-
 						</div>
 						<div class="table-row">
 							<div class="serial-price"></div>
@@ -281,7 +267,6 @@
 								&laquo;20 упражнений для красивого лица&raquo;</div>
 							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
 								&laquo;20 упражнений для красивого лица&raquo;</div>
-
 						</div>
 						<div class="table-row">
 							<div class="serial-price"></div>
@@ -291,7 +276,6 @@
 								&laquo;4 техники для укрепления иммунитета&raquo;</div>
 							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
 								&laquo;4 техники для укрепления иммунитета&raquo;</div>
-
 						</div>
 						<div class="table-row">
 							<div class="serial-price"></div>
@@ -301,7 +285,6 @@
 								&laquo;10 рецептов вегетарианских блюд&raquo;</div>
 							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
 								&laquo;10 рецептов вегетарианских блюд&raquo;</div>
-
 						</div>
 						<div class="table-row">
 							<div class="serial-price"></div>
@@ -311,29 +294,31 @@
 								<s>Мини-курс &laquo;йога для фотосессии&raquo;</s></div>
 							<div class="country-price"> <img src="{% static 'img/elements/orig.png' %}" width="30" alt="flag">
 								Мини-курс &laquo;йога для фотосессии&raquo;</div>
-
 						</div>
 						<div class="table-row">
 							<div class="serial-price"></div>
 							<div class="country-price">
 								<div class="container border-top-generic"> <h6 class="course">Стоимость 2 000&#8381;</h6>
-									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
-
+									<a href="#" class="genric-btn primary circle arrow">Приобрести
+										<span class="lnr lnr-arrow-right"></span>
+									</a>
 								</div>
 							</div>
 							<div class="country-price">
 
 								<div class="container border-top-generic"> <h6 class="course">Стоимость 3 500&#8381;</h6>
-									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
-
+									<a href="#" class="genric-btn primary circle arrow">Приобрести
+										<span class="lnr lnr-arrow-right"></span>
+									</a>
 								</div>
 
 							</div>
 							<div class="country-price">
 
 								<div class="container border-top-generic"> <h6 class="course">Стоимость 11 900&#8381;</h6>
-									<a href="#" class="genric-btn primary circle arrow">Приобрести<span class="lnr lnr-arrow-right"></span></a>
-
+									<a href="#" class="genric-btn primary circle arrow">Приобрести
+										<span class="lnr lnr-arrow-right"></span>
+									</a>
 								</div>
 
 							</div>
@@ -342,7 +327,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 
 <!--			Конец Прайс-->

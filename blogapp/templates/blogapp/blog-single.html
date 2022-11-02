@@ -2,7 +2,6 @@
 {%load static%}
 
 {%block 'banner' %}
-
 <!-- start banner Area -->
 <section class="banner-area relative about-banner" id="home">
     <img class="cta-img img-fluid pb-35 banner-post" src="{% static 'img/resting.png' %}" alt="">
@@ -13,22 +12,18 @@
                 <h1>
                     Пост
                 </h1>
-                <p class="link-nav"><a href="{% url 'index' %}">Главная </a>
+                <p class="link-nav">
+                    <a href="{% url 'index' %}">Главная </a>
                     <span class="lnr lnr-arrow-right grey"></span>
-                    <a href="{% url 'blog:index' %}">
-                        Блог
-                    </a>
+                    <a href="{% url 'blog:index' %}">Блог</a>
                     <span class="lnr lnr-arrow-right grey"></span>
-                    <a href="{% url 'blog:single' object.id %}">
-                        Пост
-                    </a>
+                    <a href="{% url 'blog:single' object.id %}">Пост</a>
                 </p>
             </div>
         </div>
     </div>
 </section>
 <!-- End banner Area -->
-
 {% endblock %}
 
 {%block 'content' %}
@@ -62,24 +57,19 @@
                                 <p>
                                     {{object.description_1}}
                                 </p>
-
                             </div>
 
-
-                                <div class="col-6">
-                                    <img class="img-fluid blog-extra" src="/media/{{ object.extra_img_3 }}" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <img class="img-fluid blog-extra" src="/media/{{ object.extra_img_4 }}" alt="">
-                                </div>
-                                <div class="col-lg-12 mt-30">
-
-                                    <p class="excert">
-                                        {{object.description_2}}
-                                    </p>
-
-                                </div>
-
+                            <div class="col-6">
+                                <img class="img-fluid blog-extra" src="/media/{{ object.extra_img_3 }}" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid blog-extra" src="/media/{{ object.extra_img_4 }}" alt="">
+                            </div>
+                            <div class="col-lg-12 mt-30">
+                                <p class="excert">
+                                    {{object.description_2}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,9 +77,8 @@
                 <!--                Боковой блок-->
                {% include 'mainapp/include/side_block.html'%}
                 <!--                Конец бокового блока-->
-            </div>
         </div>
+    </div>
 </section>
 <!-- End post-content Area -->
-
 {% endblock %}

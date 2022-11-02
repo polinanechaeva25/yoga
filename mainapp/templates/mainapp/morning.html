@@ -12,11 +12,13 @@
 					<h1>
 						Утренние зарядки
 					</h1>
-					<p class="link-nav"><a href="{% url 'training:index' %}">Тренировки </a>
+					<p class="link-nav">
+						<a href="{% url 'training:index' %}">Тренировки </a>
 						<span class="lnr lnr-arrow-right grey"></span>
 						<a href="{% url 'training:online' %}">Онлайн курсы </a>
 						<span class="lnr lnr-arrow-right grey"></span>
-						<a href="{% url 'training:morning' %}">Зарядка</a></p>
+						<a href="{% url 'training:morning' %}">Зарядка</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -30,12 +32,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 posts-list">
-
-
-							<div class="section-title-wrap text-center">
-								<h1>Для чего необходим курс</h1>
-							</div>
-
+					<div class="section-title-wrap text-center">
+						<h1>Для чего необходим курс</h1>
+					</div>
 
 					<div class="single-post row">
 						<div class="col-lg-12">
@@ -115,9 +114,6 @@
 				</div>
 
 			<div class="row justify-content-center d-flex align-items-center">
-
-<!--Проблема с фотками в интервале 1200 < x < 991 px-->
-
 				<div class="col-md-6 col-lg-3 single-team">
 					<div class="thumb">
 						<img class="img-fluid morn" src="{% static 'img/day1.jpg' %}" alt="">
@@ -126,8 +122,10 @@
 					</div>
 					<div class="meta-text mt-30 mb-50 text-center">
 						<h4>День 1</h4>
-						<p>Войдём в ритм движений, улучшим кровообращение
-							позвоночника.Постоянно продвигаясь сверху вниз, увеличим подвижность.</p>
+						<p class="morn-day">
+							Войдём в ритм движений, улучшим кровообращение
+							позвоночника.Постоянно продвигаясь сверху вниз, увеличим подвижность.
+						</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 single-team">
@@ -138,8 +136,10 @@
 					</div>
 					<div class="meta-text mt-30 mb-50 text-center">
 						<h4>День 2</h4>
-						<p>Освоим техники для растяжения диафрагмы улучшения качества дыхания.
-							Совместим приятные повороты с силовыми упражнениями и вытяжением.</p>
+						<p class="morn-day">
+							Освоим техники для растяжения диафрагмы улучшения качества дыхания.
+							Совместим приятные повороты с силовыми упражнениями и вытяжением.
+						</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 single-team">
@@ -150,8 +150,10 @@
 					</div>
 					<div class="meta-text mt-30 mb-50 text-center">
 						<h4>День 3</h4>
-						<p>Снимим напряжение для спины. Подключим активнее область пресса.
-							Динамично и эффективно проработаем область тазобедренных суставов и мышц спины.</p>
+						<p class="morn-day">
+							Снимим напряжение для спины. Подключим активнее область пресса.
+							Динамично и эффективно проработаем область тазобедренных суставов и мышц спины.
+						</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 single-team">
@@ -162,8 +164,10 @@
 					</div>
 					<div class="meta-text mt-30 mb-50 text-center">
 						<h4>День 4</h4>
-						<p>Проведём суставную разминку сидя. Улучшим кровообращение в области таза.
-							Сделаем бодрую практику в положении стоя на баланс и укрепление мышц ног.</p>
+						<p class="morn-day">
+							Проведём суставную разминку сидя. Улучшим кровообращение в области таза.
+							Сделаем бодрую практику в положении стоя на баланс и укрепление мышц ног.
+						</p>
 					</div>
 				</div>
 
@@ -175,8 +179,10 @@
 					</div>
 					<div class="meta-text mt-30 mb-50 text-center">
 						<h4>День 5</h4>
-						<p>Проработаем и раскроем грудной отдел и плечи. Интересная стато-динамичная нагрузка
-							не даст заскучать ни нам, ни мышцам.</p>
+						<p class="morn-day">
+							Проработаем и раскроем грудной отдел и плечи. Интересная стато-динамичная нагрузка
+							не даст заскучать ни нам, ни мышцам.
+						</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 single-team">
@@ -187,8 +193,10 @@
 					</div>
 					<div class="meta-text mt-30 mb-50 text-center">
 						<h4>День 6</h4>
-						<p>Проработаем и раскроем грудной отдел и плечи. Интересная стато-динамичная нагрузка
-							не даст заскучать ни нам, ни мышцам.</p>
+						<p class="morn-day">
+							Проработаем и раскроем грудной отдел и плечи. Интересная стато-динамичная нагрузка
+							не даст заскучать ни нам, ни мышцам.
+						</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 single-team">
@@ -199,8 +207,10 @@
 					</div>
 					<div class="meta-text mt-30 mb-50 text-center">
 						<h4>День 7</h4>
-						<p>Самый активный из 7 уроков. Программа жиросжигания будет запущена. Обеспечьте себе приток
-							свежего воздуха. Будет жарко!</p>
+						<p class="morn-day">
+							Самый активный из 7 уроков. Программа жиросжигания будет запущена. Обеспечьте себе приток
+							свежего воздуха. Будет жарко!
+						</p>
 					</div>
 				</div>
 
@@ -214,32 +224,24 @@
 							<div>
 								<div class="single-defination">
 									<h4 class="mb-20">Базовый тариф</h4>
-										<ul class="unordered-list">
-											<li>7 уроков авторской программы</li>
-											<li>Поддержка в групповом чате</li>
-											<li>Эффективная профилактическая, восстанавливающая дыхательная гимнастика.</li>
-										</ul>
-
+									<ul class="unordered-list">
+										<li>7 уроков авторской программы</li>
+										<li>Поддержка в групповом чате</li>
+										<li>Эффективная профилактическая, восстанавливающая дыхательная гимнастика.</li>
+									</ul>
 								</div>
-
 							</div>
 
 							<div class="country-price">
-
 								<div class="container border-top-generic price">
 									<h6 class="course fs-13">Стоимость 1 600&#8381;
 									<a href="#" class="genric-btn primary circle arrow morning">Приобрести</a></h6>
-
-
 								</div>
-
 							</div>
-
 						</blockquote>
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</section>
 

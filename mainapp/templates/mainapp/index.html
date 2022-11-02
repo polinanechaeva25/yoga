@@ -2,29 +2,29 @@
 {%load static%}
 
 
-  	{%block 'banner' %}
-	<!-- start banner Area -->
-	<section class="banner-area relative" id="home">
-		<div class="overlay overlay-bg"></div>
-		<div class="container-fluid">
-			<div class="row fullscreen d-flex align-items-center justify-content-between">
-				<div class="col-lg-6 col-md-6 banner-img">
-					<img class="img-fluid" src="{% static 'img/banner-img.png' %}"  alt="">
-				</div>
-				<div class="banner-content col-lg-6 col-md-6">
-					<h1 class="text-uppercase">
-						<span>Йога онлайн</span> с <br> Анной Флешлер <br>
+{%block 'banner' %}
+<!-- start banner Area -->
+<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>
+	<div class="container-fluid">
+		<div class="row fullscreen d-flex align-items-center justify-content-between">
+			<div class="col-lg-6 col-md-6 banner-img">
+				<img class="img-fluid" src="{% static 'img/banner-img.png' %}"  alt="">
+			</div>
+			<div class="banner-content col-lg-6 col-md-6">
+				<h1 class="text-uppercase">
+					<span>Йога онлайн</span> с <br> Анной Флешлер <br>
 
-					</h1>
-					<a href="{% url 'training:index' %}" class="primary-btn mt-40">Оформить заказ</a>
-				</div>
+				</h1>
+				<a href="{% url 'training:index' %}" class="primary-btn mt-40">Оформить заказ</a>
 			</div>
 		</div>
-	</section>
-	<!-- End banner Area -->
-	{% endblock %}
+	</div>
+</section>
+<!-- End banner Area -->
+{% endblock %}
 
-	{%block 'content' %}
+{%block 'content' %}
 <!-- Start About Us Area -->
 	<section class="about-area section-gap">
 		<div class="container">
@@ -74,7 +74,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-lg-6 about-left">
 					<img class="img-fluid" src="{% static 'img/about-img.png' %}" width="450" alt="">
 				</div>
@@ -97,15 +96,17 @@
 
 			<div class="row">
 				<div class="active-testimonial-carusel">
+
 					{% for comment in comment_list %}
 						{% if comment.is_checked%}
 							<div class="single-testimonial item">
-								<img class="mx-auto rounded-circle comment-img" src="/media/{{ comment.photo }}" height="80" alt="">
-								<p class="desc">
+								<img class="mx-auto rounded-circle comment-img" src="/media/{{ comment.photo }}" style="height: 80px;" alt="">
+
+								<p class="desc comment-text">
 									{{comment.comment}}
 								</p>
 								<h4>{{comment.user_name}}</h4><br>
-								<h6>{% if comment.course %}{{comment.course}}{% endif %}</h6>
+								<h6 class="course-text">{% if comment.course %}{{comment.course}}{% endif %}</h6>
 								<p>{{comment.experience}}</p>
 							</div>
 						{% endif %}
@@ -114,27 +115,23 @@
 				</div>
 			</div>
 
-
-
-
-
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-12">
+					<div class="section-title-wrap text-center">
+						<i class='bx bx-chevrons-right bx-fade-right arrow-animation'></i>
+					</div>
+				</div>
+			</div>
 				<div class="create-comment col-lg-12 col-md-12">
 					<a href="{% url 'comment' %}" class="primary-btn mt-40">Оставить комментарий</a>
 				</div>
-
-
-
-
-
-
-
 		</div>
 	</section>
 	<!-- End testomial Area -->
 
 	<!-- Start cta-one Area -->
 	<section class="cta-one-area relative section-gap">
-		<img class="cta-img img-fluid start" src="{% static 'img/tren.png' %}" width="520" alt="">
+		<img class="cta-img img-fluid start" src="{% static 'img/tren.png' %}" alt="">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="wrap grey">
@@ -183,5 +180,5 @@
 			</div>
 		</div>
 	</section>
-	<!-- End blog Area -->
-	{% endblock %}
+<!-- End blog Area -->
+{% endblock %}
