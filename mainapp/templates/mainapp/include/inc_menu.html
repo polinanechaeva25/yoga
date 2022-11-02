@@ -1,0 +1,31 @@
+{%load static%}
+
+<nav id="nav-menu-container">
+    <ul class="nav-menu">
+        <li><a class="{% if request.resolver_match.view_name == 'index'%} active {% endif %}" href="{% url 'index' %}">
+            Главная</a>
+        </li>
+
+        <li><a class="{% if request.resolver_match.view_name == 'about'%} active {% endif %}" href="{% url 'about' %}">
+            Обо мне</a>
+        </li>
+
+        <li>
+            <a class="{% if request.resolver_match.view_name == 'blog:index' or request.resolver_match.view_name == 'blog:single' or request.resolver_match.view_name == 'blog:tag' or request.resolver_match.view_name == 'blog:name' or request.resolver_match.view_name == 'blog:category'%} active {% endif %}"
+            href="{% url 'blog:index' %}">
+                Блог
+            </a>
+        </li>
+
+        <li class="menu-has-children">
+            <a class="{% if request.resolver_match.view_name == 'training:index' or request.resolver_match.view_name == 'training:online' or request.resolver_match.view_name == 'training:offline'%} active {% endif %}"
+               href="{% url 'training:index' %}"> Тренировки</a>
+            <ul>
+                <li><a href="{% url 'training:online' %}">Онлайн курсы</a></li>
+                <li><a href="{% url 'training:offline' %}">Очные занятия</a></li>
+            </ul>
+        </li>
+        <li><a class="{% if request.resolver_match.view_name == 'contact'%} active {% endif %}"
+               href="{% url 'contact' %}">Контакты</a></li>
+    </ul>
+</nav>

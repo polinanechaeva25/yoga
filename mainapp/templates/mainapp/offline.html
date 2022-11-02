@@ -1,0 +1,152 @@
+{% extends 'mainapp/base.html'%}
+{%load static%}
+
+{%block 'banner' %}
+<!-- start banner Area -->
+	<section class="banner-area relative about-banner" id="home">
+		<img class="cta-img img-fluid" src="{% static 'img/offline-img.png' %}" width="800" alt="">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1>
+						Оффлайн занятия
+					</h1>
+					<p class="link-nav">
+						<a href="{% url 'index' %}">Главная </a>
+						<span class="lnr lnr-arrow-right grey"></span>
+						<a href="{% url 'training:index' %}">Тренировки </a>
+						<span class="lnr lnr-arrow-right grey"></span>
+						<a href="{% url 'training:offline' %}">Оффлайн занятия</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+{% endblock %}
+
+{% block 'content'%}
+<section class="whole-wrap">
+		<div class="container">
+			<div class="section-top-border">
+				<h3 class="mb-30"> Место проведения</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="{% static 'img/elements/room.jpg' %}" alt="" class="img-fluid">
+					</div>
+
+					<div class="col-md-6 mt-sm-20 left-align-p">
+						<p>
+							Очные встречи проходят в г.Владимире по адресу ул.Песочная, 2Д.
+							Подробнее смотрите на страничке <a href="{% url 'contact' %}">контакты</a>.
+							Есть возможность персональных занятий, цены и график утачняйте по почте или What'sApp.<br>
+							Заняться йогой можно в любом возрасте, тем она и хороша! Мы подберём тренировку
+							и скорректируем нагрузку и для 13-летней девушки, и для 70-летней женщины.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<img src="{% static 'img/elements/group.png' %}" alt="" class="img-fluid">
+					</div>
+
+				</div>
+			</div>
+		</div>
+</section>
+
+<!-- Start schedule Area -->
+	<section class="schedule-area section-gap">
+		<img class="featured-img img-fluid" src="{% static 'img/featured-class/feature-img.png' %}" width="450" alt="">
+		<div class="container">
+
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-12">
+					<div class="section-title-wrap text-center">
+						<h1>Расписание занятий</h1>
+						<p>Идеальный день, чтобы начать.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="table-wrap col-lg-10">
+					<table class="schdule-table table table-bordered">
+						<thead class="thead-light">
+							<tr>
+								<th class="head" scope="col">Виды занятий</th>
+								<th class="head" scope="col">Пн</th>
+								<th class="head" scope="col">Вт</th>
+								<th class="head" scope="col">Ср</th>
+								<th class="head" scope="col">Чт</th>
+								<th class="head" scope="col">Пт</th>
+								<th class="head" scope="col">Вс</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="name" scope="row">Pilates Strong</th>
+								<td>10.30</td>
+								<td>—</td>
+								<td>10.30</td>
+								<td>—</td>
+								<td>10.30</td>
+								<td>—</td>
+							</tr>
+							<tr>
+								<th class="name" scope="row">Йога</th>
+								<td>—</td>
+								<td>18.00<br>19.00</td>
+								<td>—</td>
+								<td>18.00<br>19.00</td>
+								<td>—</td>
+								<td>10.00</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+	<!-- End schedule Area -->
+
+			<div class="section-top-border">
+				<div class="row d-flex justify-content-center">
+					<div class="col-lg-12">
+						<div class="section-title-wrap text-center">
+							<h1>Прайс</h1>
+						</div>
+					</div>
+				</div>
+				<div class="progress-table-wrap">
+					<div class="progress-table">
+						<div class="table-head">
+							<div class="serial">Название абонемента</div>
+							<div class="country">Количество занятий</div>
+							<div class="visit">Стоимость</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">Одно групповое занятие</div>
+							<div class="country"> 1</div>
+							<div class="visit">350</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">Кватро</div>
+							<div class="country"> 4</div>
+							<div class="visit">1200</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">Бесконечность</div>
+							<div class="country"> 8</div>
+							<div class="visit">2000</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">Декада</div>
+							<div class="country"> 10</div>
+							<div class="visit">2400</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

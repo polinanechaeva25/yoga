@@ -1,0 +1,248 @@
+{% extends 'mainapp/base.html'%}
+{%load static%}
+
+{%block 'banner' %}
+<!-- start banner Area -->
+	<section class="banner-area relative about-banner" id="home">
+		<img class="cta-img img-fluid banner-morning" src="{% static 'img/morning.png' %}" alt="">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1>
+						Утренние зарядки
+					</h1>
+					<p class="link-nav">
+						<a href="{% url 'training:index' %}">Тренировки </a>
+						<span class="lnr lnr-arrow-right grey"></span>
+						<a href="{% url 'training:online' %}">Онлайн курсы </a>
+						<span class="lnr lnr-arrow-right grey"></span>
+						<a href="{% url 'training:morning' %}">Зарядка</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+{% endblock %}
+
+{% block 'content' %}
+
+	<section class="post-content-area single-post-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 posts-list">
+					<div class="section-title-wrap text-center">
+						<h1>Для чего необходим курс</h1>
+					</div>
+
+					<div class="single-post row">
+						<div class="col-lg-12">
+							<div class="row mt-30 mb-30">
+								<div class="col-6">
+									<img class="img-fluid" src="{% static 'img/blog/offline.jpg' %}" alt="">
+								</div>
+								<div class="col-6">
+									<img class="img-fluid" src="{% static 'img/blog/morning-sec.jpg' %}" alt="">
+								</div>
+								<div class="col-lg-12 mt-30">
+									<p>
+										Приведётет в тонус все мышцы. Восстановите работу позвоночника.
+										Улучшите мобильность суставов. Улучшите работу лимфо-системы и
+										системы пищеварния.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+<!--				Боковой блок-->
+				<div class="col-lg-4 sidebar-widgets">
+					<div>
+						<div class="single-element-widget mt-140" >
+							<h3 class="mb-30">Вы заметите:</h3>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>1. Подтянулся живот</p>
+								<div class="disabled-checkbox">
+									<input type="checkbox" id="disabled-checkbox-active" checked disabled>
+									<label for="disabled-checkbox-active"></label>
+								</div>
+							</div>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>2. Спина перестала болеть</p>
+								<div class="disabled-checkbox">
+									<input type="checkbox" id="disabled-checkbox-active" checked disabled>
+									<label for="disabled-checkbox-active"></label>
+								</div>
+							</div>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>3. Осанка улучшилась</p>
+								<div class="disabled-checkbox">
+									<input type="checkbox" id="disabled-checkbox-active" checked disabled>
+									<label for="disabled-checkbox-active"></label>
+								</div>
+							</div>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>4. Уменшились отёки</p>
+								<div class="disabled-checkbox">
+									<input type="checkbox" id="disabled-checkbox-active" checked disabled>
+									<label for="disabled-checkbox-active"></label>
+								</div>
+							</div>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>5. Стали чувствоать себя значительно бодрее</p>
+								<div class="disabled-checkbox">
+									<input type="checkbox" id="disabled-checkbox-active" checked disabled>
+									<label for="disabled-checkbox-active"></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+<!--				Конец бокового блока-->
+
+			</div>
+
+				<div class="row d-flex justify-content-center">
+					<div class="col-lg-12">
+						<div class="section-title-wrap text-center">
+							<h1>Программа курса</h1>
+							<p> Иногда достаточно одной недели для кардинального изменения</p>
+						</div>
+					</div>
+				</div>
+
+			<div class="row justify-content-center d-flex align-items-center">
+				<div class="col-md-6 col-lg-3 single-team">
+					<div class="thumb">
+						<img class="img-fluid morn" src="{% static 'img/day1.jpg' %}" alt="">
+						<div class="align-items-center justify-content-center d-flex">
+						</div>
+					</div>
+					<div class="meta-text mt-30 mb-50 text-center">
+						<h4>День 1</h4>
+						<p class="morn-day">
+							Войдём в ритм движений, улучшим кровообращение
+							позвоночника.Постоянно продвигаясь сверху вниз, увеличим подвижность.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 single-team">
+					<div class="thumb">
+						<img class="img-fluid morn" src="{% static 'img/day5.jpg' %}" alt="">
+						<div class="align-items-center justify-content-center d-flex">
+						</div>
+					</div>
+					<div class="meta-text mt-30 mb-50 text-center">
+						<h4>День 2</h4>
+						<p class="morn-day">
+							Освоим техники для растяжения диафрагмы улучшения качества дыхания.
+							Совместим приятные повороты с силовыми упражнениями и вытяжением.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 single-team">
+					<div class="thumb">
+						<img class="img-fluid morn" src="{% static 'img/day2.jpg' %}" alt="">
+						<div class="align-items-center justify-content-center d-flex">
+						</div>
+					</div>
+					<div class="meta-text mt-30 mb-50 text-center">
+						<h4>День 3</h4>
+						<p class="morn-day">
+							Снимим напряжение для спины. Подключим активнее область пресса.
+							Динамично и эффективно проработаем область тазобедренных суставов и мышц спины.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 single-team">
+					<div class="thumb">
+						<img class="img-fluid morn" src="{% static 'img/day6.jpg' %}" alt="">
+						<div class="align-items-center justify-content-center d-flex">
+						</div>
+					</div>
+					<div class="meta-text mt-30 mb-50 text-center">
+						<h4>День 4</h4>
+						<p class="morn-day">
+							Проведём суставную разминку сидя. Улучшим кровообращение в области таза.
+							Сделаем бодрую практику в положении стоя на баланс и укрепление мышц ног.
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-3 single-team">
+					<div class="thumb">
+						<img class="img-fluid morn" src="{% static 'img/day3.png' %}" alt="">
+						<div class="align-items-center justify-content-center d-flex">
+						</div>
+					</div>
+					<div class="meta-text mt-30 mb-50 text-center">
+						<h4>День 5</h4>
+						<p class="morn-day">
+							Проработаем и раскроем грудной отдел и плечи. Интересная стато-динамичная нагрузка
+							не даст заскучать ни нам, ни мышцам.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 single-team">
+					<div class="thumb">
+						<img class="img-fluid morn" src="{% static 'img/day7.jpg' %}" alt="">
+						<div class="align-items-center justify-content-center d-flex">
+						</div>
+					</div>
+					<div class="meta-text mt-30 mb-50 text-center">
+						<h4>День 6</h4>
+						<p class="morn-day">
+							Проработаем и раскроем грудной отдел и плечи. Интересная стато-динамичная нагрузка
+							не даст заскучать ни нам, ни мышцам.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 single-team">
+					<div class="thumb">
+						<img class="img-fluid morn" src="{% static 'img/day4.jpg' %}" alt="">
+						<div class="align-items-center justify-content-center d-flex">
+						</div>
+					</div>
+					<div class="meta-text mt-30 mb-50 text-center">
+						<h4>День 7</h4>
+						<p class="morn-day">
+							Самый активный из 7 уроков. Программа жиросжигания будет запущена. Обеспечьте себе приток
+							свежего воздуха. Будет жарко!
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section-top-border">
+				<h3 class="mb-30">Приобрести курс</h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<blockquote class="generic-blockquote">
+							<div>
+								<div class="single-defination">
+									<h4 class="mb-20">Базовый тариф</h4>
+									<ul class="unordered-list">
+										<li>7 уроков авторской программы</li>
+										<li>Поддержка в групповом чате</li>
+										<li>Эффективная профилактическая, восстанавливающая дыхательная гимнастика.</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="country-price">
+								<div class="container border-top-generic price">
+									<h6 class="course fs-13">Стоимость 1 600&#8381;
+									<a href="#" class="genric-btn primary circle arrow morning">Приобрести</a></h6>
+								</div>
+							</div>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

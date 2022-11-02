@@ -1,0 +1,111 @@
+{% extends 'mainapp/base.html'%}
+{%load static%}
+
+{%block 'banner' %}
+
+	<!-- start banner Area -->
+	<section class="banner-area relative blog-home-banner" id="home">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content blog-header-content col-lg-12">
+					<h1 class="text-uppercase text-white">
+						<span>YogaHanna</span> <br> Будь в тонусе каждый день
+					</h1>
+					<a href="{% url 'training:index' %}" class="primary-btn mt-40">Присоединиться</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+{% endblock %}
+
+{%block 'content' %}
+<!-- Start post-content Area -->
+	<section class="post-content-area">
+		<div class="container">
+			<div class="row pt-80">
+				<div class="col-lg-8 posts-list">
+					{% if posts_list %}
+
+						{% for post in posts_list %}
+							<div class="single-post row">
+								<div class="col-lg-2  col-md-3 meta-details ">
+									<ul class="tags">
+										<li><a href="#">{% if post.tag_1 %}&#9839;{% endif %}{{post.tag_1}}</a></li>
+										<li><a href="#">{% if post.tag_2 %}&#9839;{% endif %}{{post.tag_2}}</a></li>
+										<li><a href="#">{% if post.tag_3 %}&#9839;{% endif %}{{post.tag_3}}</a></li>
+										<li><a href="#">{% if post.tag_4 %}&#9839;{% endif %}{{post.tag_4}}</a></li>
+										<li><a href="#">{% if post.tag_5 %}&#9839;{% endif %}{{post.tag_5}}</a></li>
+									</ul>
+									<div class="user-details row">
+										<p class="date col-lg-12 col-md-12 col-6 date-size">
+											<a href="#">{{post.add_datetime|date:"d M, Y"}}</a>
+											<span class="lnr lnr-calendar-full"></span>
+										</p>
+									</div>
+								</div>
+
+								<div class="col-lg-10 col-md-8 ">
+									<div class="feature-img">
+										<img class="img-fluid blog" src="/media/{{ post.image }}" alt="">
+									</div>
+
+									<a class="posts-title" href="{% url 'blog:single' post.id %}"><h3>{{ post.headers }}</h3></a>
+									<p class="excert">
+										{{ post.short_description }}
+									</p>
+									<a href="{% url 'blog:single' post.id %}" class="primary-btn">Подробнее</a>
+								</div>
+							</div>
+						{% endfor %}
+
+	<!--					Pagination-->
+						{% if is_paginated %}
+						<nav class="blog-pagination justify-content-center d-flex">
+							<ul class="pagination">
+
+									{% if page_obj.has_previous %}
+									<li class="page-item">
+										<a href="/blog?page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Previous">
+											<span aria-hidden="true">
+												<span class="lnr lnr-chevron-left"></span>
+											</span>
+										</a>
+									</li>
+									{% endif %}
+
+									<li class="page-item active">
+										<a href="/blog?page={{ page_obj.number }}" class="page-link">
+											{{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+										</a>
+									</li>
+
+									{% if page_obj.has_next %}
+										<li class="page-item">
+											<a href="/blog?page={{ page_obj.next_page_number }}" class="page-link" aria-label="Next">
+												<span aria-hidden="true">
+													<span class="lnr lnr-chevron-right"></span>
+												</span>
+											</a>
+										</li>
+									{% endif %}
+
+							</ul>
+						</nav>
+						{% endif %}
+	<!--					End Pagination-->
+
+					{% else %}
+						<h3>Постов не обнаружено :(</h3>
+					{% endif %}
+				</div>
+
+<!--				Боковой блок-->
+				{% include 'mainapp/include/side_block.html'%}
+			</div>
+		</div>
+	</section>
+	<!-- End post-content Area -->
+{% endblock %}
