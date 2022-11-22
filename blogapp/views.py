@@ -26,8 +26,9 @@ class CategoryPopTagsContextMixin:
                 if tag:
                     posts_tags.append(tag)
         context['posts_tags'] = posts_tags
-        posts_tags = random.sample(list(set(posts_tags)), 7)
-        context['posts_tags'] = posts_tags
+        if posts_tags:
+            posts_tags = random.sample(list(set(posts_tags)), 7)
+            context['posts_tags'] = posts_tags
 
         # Category
         context['posts_categories'] = Posts.objects.values('category').order_by('category').annotate(
